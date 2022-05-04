@@ -1,0 +1,38 @@
+{
+  "users": {
+    "593991398786@s.whatsapp.net": {
+      "afkTime": -1,
+      "afkReason": "",
+      "limit": "Infinity"
+    }
+  },
+  "chats": {
+    "593991398786@s.whatsapp.net": {
+      "mute": false,
+      "antilink": false
+    }
+  },
+  "sticker": {},
+  "database": {},
+  "game": {
+    "tebaklagu": [],
+    "family100": [],
+    "math": [],
+    "tebakgambar": [],
+    "tebakkata": [],
+    "lontong": [],
+    "lontong_desk": [],
+    "kalimat": [],
+    "lirik": [],
+    "tebakan": []
+  },
+  "settings": {
+    "14162776464@s.whatsapp.net": {
+      "status": 1651674300751,
+      "autobio": true
+    }
+  },
+  "others": {
+    "vote": []
+  }
+}
