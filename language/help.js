@@ -14,6 +14,7 @@ return`
 
 ╭─❒ 「 Administración 」
 │» ${prefix}linkgrupo
+│» ${prefix}grupoinfo
 │» ${prefix}bug [reporte de bugs]
 │» ${prefix}report [reportar bug]
 │» ${prefix}ephemeral [opcion]
@@ -282,6 +283,8 @@ return`
 ╭─❒ 「 Juegos 」
 │» ${prefix}amigos
 │» ${prefix}gay
+│» ${prefix}textoinvert [texto]
+│» ${prefix}convertid [traducir indonesia]
 │» ${prefix}sitiosx
 │» ${prefix}instagram
 │» ${prefix}pareja
@@ -317,6 +320,7 @@ return`
 ╰❒
 
 ╭─❒ 「 DataBase 」
+│» ${prefix}solicitar
 │» ${prefix}ping
 │» ${prefix}test
 │» ${prefix}owner
@@ -353,6 +357,7 @@ return`
 ╰❒
 
 ╭─❒ 「 Owner 」
+│» ${prefix}mode
 │» ${prefix}reacciona [emoji]
 │» ${prefix}join2 [link]
 │» ${prefix}chat [opcion]
@@ -410,6 +415,7 @@ exports.thanksto = () => {
 exports.group = (prefix) => {
 return`
 ╭─❒ 「 Administración 」
+│» ${prefix}grupoinfo
 │» ${prefix}linkgrupo
 │» ${prefix}ephemeral [opcion]
 │» ${prefix}setppgc [imagen]
@@ -702,6 +708,8 @@ Este menu suele contener errores de api, algunos logos no funcionarán!
 exports.funny = (prefix) => {
 return`
 ╭─❒ 「 Juegos 」
+│» ${prefix}convertid [traducir IND]
+│» ${prefix}textoinvert [texto]
 │» ${prefix}gay
 │» ${prefix}sitiosx
 │» ${prefix}instagram
@@ -750,6 +758,7 @@ return`
 exports.main = (prefix) => {
 return`
 ╭─❒ 「 DataBase 」
+│» ${prefix}solicitar
 │» ${prefix}ping
 │» ${prefix}owner
 │» ${prefix}Menu
@@ -796,6 +805,7 @@ exports.ownermenu = (prefix) => {
 return` 
 
 ╭─❒ 「 Owner 」
+│» ${prefix}set
 │» ${prefix}chat [opcion]
 │» ${prefix}join [link]
 │» ${prefix}leave
