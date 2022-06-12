@@ -1,7 +1,10 @@
 /*
-   * Create By CarlosOp
-   * Contact Me on wa.me/593991398786
-   * Follow https://github.com/carlospopon
+   * Create By 𝙲𝚛𝚕𝚜ꪶ͢sєrꫂ⁩ prih
+   * Contactame en Wa wa.me/593991398786
+   * Follow https://github.com/CarlosTwT
+   * Gracias a Hisoka por la base!
+   * Este script es completamente *GRATIS* se precavido de los estafadores.
+   * Si intentas comercializar este script podrías tener problemas legales!   
 */
 
 require('./settings')
@@ -13,6 +16,7 @@ const { exec, spawn, execSync } = require("child_process")
 const axios = require('axios')
 const path = require('path')
 const os = require('os')
+const fetch = require('node-fetch')
 const moment = require('moment-timezone')
 const { JSDOM } = require('jsdom')
 const speed = require('performance-now')
@@ -67,17 +71,49 @@ module.exports = yol = async (yol, m, chatUpdate, store) => {
     	const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
     	const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
     	const isPremium = isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
-	    const verificado = {"key": {"fromMe": false,"participant":"0@s.whatsapp.net", "remoteJid": "557598293339@g.us" }, "message": {orderMessage: {itemCount: 999999999,status: 4, thumbnail: fs.readFileSync(`./verificado.jpg`) ,message: `Pedido : ${pushname}`,surface: 100, sellerJid: "0@s.whatsapp.net"}} }
-	    const sticker = {"key": {"fromMe": false,"participant":"0@s.whatsapp.net", "remoteJid": "557598293339@g.us" }, "message": {orderMessage: {itemCount: 593991398786,status: 4, thumbnail: fs.readFileSync(`./verificado.jpg`) ,message: `Sticker by Kitzia`,surface: 100, sellerJid: "0@s.whatsapp.net"}} }    
+    
+       //const verificado
+        const replyvid = (teks) => {yol.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply":{"title": `Hola ${pushname}`,"body": global.ownername,"previewType": "PHOTO","thumbnail": thumb, "sourceUrl": global.myweb}}}, {quoted: m})}
+	    const verificado = {"key": {"fromMe": false,"participant":"0@s.whatsapp.net", "remoteJid": "557598293339@g.us" }, "message": {orderMessage: {itemCount: 2022,status: 4, thumbnail: fs.readFileSync(`./verificado.jpg`) ,message: `Pedido : ${pushname}`,surface: 100, sellerJid: "0@s.whatsapp.net"}} }
+	    const sticker = {"key": {"fromMe": false,"participant":"0@s.whatsapp.net", "remoteJid": "557598293339@g.us" }, "message": {orderMessage: {itemCount: 2022,status: 4, thumbnail: fs.readFileSync(`./verificado.jpg`) ,message: `Sticker by Kitzia`,surface: 100, sellerJid: "0@s.whatsapp.net"}} }    
 		const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': verificado, thumbnail: verificado,sendEphemeral: true}} }
-		const fgif = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})},message: {"videoMessage": { "title":`© ${ownername}`, "h": `Hmm`,'seconds': '359996400', 'gifPlayback': 'true', 'caption': `© ${ownername}`, 'jpegThumbnail': verificado}} }
+		const fgif = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})},message: {"videoMessage": { "title":`© ${ownername}`, "h": `Hmm`,'seconds': '00001', 'gifPlayback': 'true', 'caption': `© ${ownername}`, 'jpegThumbnail': verificado}} }
 		const floc = {key : {participant : '0@s.whatsapp.net'},message: {locationMessage: {name: `${ownername}`,jpegThumbnail: verificado}} }
-		const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`${pushname}`, "h": `Hmm`,'seconds': '359996400', 'caption': `${pushname}`, 'jpegThumbnail': verificado}} }
+		const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`${pushname}`, "h": `Hmm`,'seconds': '2022', 'caption': `${pushname}`, 'jpegThumbnail': verificado}} }
 		const fvn = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds":359996400,"ptt": "true"}} } 
 		const fdoc = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${ownername}`,jpegThumbnail: verificado}} }
 		const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `© ${ownername}`, 'jpegThumbnail': verificado}} }
-        const st ={"key": {   "fromMe": false,"participant":"0@s.whatsapp.net",   "remoteJid": "556181496039-1625944593@g.us"  }, "message": {orderMessage: {itemCount: 999999,status: 200, thumbnail: verificado, surface: 200, message: `「By (𝙲𝚛𝚕𝚜ꪶ͢sєrꫂ⁩)」❤️`, orderTitle: '𝙲𝚛𝚕𝚜ꪶ͢sєrꫂ⁩', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-	
+        const st ={"key": {   "fromMe": false,"participant":"0@s.whatsapp.net",   "remoteJid": "556181496039-1625944593@g.us"  }, "message": {orderMessage: {itemCount: 2022,status: 200, thumbnail: verificado, surface: 200, message: `「By (𝙲𝚛𝚕𝚜ꪶ͢sєrꫂ⁩)」❤️`, orderTitle: '𝙲𝚛𝚕𝚜ꪶ͢sєrꫂ⁩', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+
+                //FAKEREPLY PRODUCT
+const ftoko = {
+key: {
+fromMe: false,
+participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})
+},
+message: {
+"productMessage": {
+"product": {
+"productImage":{
+"mimetype": "image/jpeg",
+"jpegThumbnail": verificado //La imagen
+},
+"title": "The CLRS+", //da tu nombre 
+"description": "SELF BOT", 
+"currencyCode": "USD",
+"priceAmount1000": "2000",
+"retailerId": "Kitzia",
+"productImageCount": 1
+},
+"businessOwnerJid": `0@s.whatsapp.net`
+}
+}
+}
+
+if (command) {
+await yol.sendPresenceUpdate('recording', m.chat)
+}
+
 	try {
             let isNumber = x => typeof x === 'number' && !isNaN(x)
             let limitUser = isPremium ? global.limitawal.premium : global.limitawal.free
@@ -119,11 +155,11 @@ module.exports = yol = async (yol, m, chatUpdate, store) => {
 
 	    	//group target by Carlos\\
 const reply = (teks) => {
-            yol.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` PRESIONA AQUÍ ⭐`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./image/verificado.jpg`),"sourceUrl": "https://tiktok.com/@theprivmen"}}}, { quoted: fgif})
+            yol.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Please Follow ⭐`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./fake.jpg`),"sourceUrl": "https://tiktok.com/@kst_mera8"}}}, { quoted: m})
         }
         
         const replay = (teks) => {
-            yol.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` PRESIONA AQUÍ⭐`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./image/verificado.jpg`),"sourceUrl": "https://tiktok.com/@theprivmen"}}}, { quoted: fgif})
+            yol.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` PRESIONA AQUÍ⭐`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./fake.jpg`),"sourceUrl": "https://tiktok.com/@theprivmen"}}}, { quoted: m})
         }
 		    
         // Public & Self
@@ -134,7 +170,7 @@ const reply = (teks) => {
         // Push Message To Console && Auto Read
         if (m.message) {
             yol.sendReadReceipt(m.chat, m.sender, [m.key.id])
-            console.log(chalk.black(chalk.bgWhite('[ MENSAJE ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> DE'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> EN'), chalk.green(m.isGroup ? pushname : 'Chat privado', m.chat))
+            console.log(chalk.black(chalk.bgWhite('[ MENSAJE ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> DE'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> DOMINIO'), chalk.green(m.isGroup ? pushname : 'PV', m.chat))
         }
 	
 	// write database every 1 minute
@@ -151,7 +187,7 @@ const reply = (teks) => {
             console.log('Reseted Limit')
         }, {
             scheduled: true,
-            timezone: "Asia/Jakarta"
+            timezone: "America/Guayaquil"
         })
         
 	// auto set bio
@@ -167,18 +203,18 @@ const reply = (teks) => {
 	  // Anti Link
         if (db.data.chats[m.chat].antilink) {
         if (budy.match(`chat.whatsapp.com`)) {
-        reply(`「 ANTI LINK 」\n\nSe te ha detectado enviando un enlace de grupo, lo sentimos, serás expulsado !`)
-        if (!isBotAdmins) return reply(`Eh bot no administrador T_T`)
+        reply(`「 ANTI LINK 」\n\nSe te ha detectado enviando un enlace de grupo, el enlace será revisado, si es de otro grupo serás expulsado !`)
+        if (!isBotAdmins) return reply(`Eh el bot no es administrador T_T`)
         let gclink = (`https://chat.whatsapp.com/`+await yol.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
         if (isgclink) return reply(`Uh, lo siento, no sucedió, porque enviaste el enlace a este grupo.`)
         if (isAdmins) return reply(`Ehh lo siento administrador`)
-        if (isCreator) return reply(`Ehh lo siento eres el dueño de mi bot`)
+        if (isCreator) return reply(`Ehh lo siento eres el dueño del bot`)
         yol.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
-        
+
       // Mutear Chat
       if (db.data.chats[m.chat].mute && !isAdmins && !isCreator) {
       return
@@ -214,6 +250,14 @@ const reply = (teks) => {
         }
 
 //TicTacToe
+//Add Hit Fax
+global.hit = {}
+if (isCmd) {
+data = await fetchJson('https://api.countapi.xyz/hit/BotMd/visits')
+conteocmd = `${data.value}`
+dataa = await fetchJson(`https://api.countapi.xyz/hit/FaxBot${moment.tz('America/Guayaquil').format('DDMMYYYY')}/visits`)
+conteoscmds = `${dataa.value}`
+}
 
 if (budy.includes("bot pendejo") || (budy.includes("Bot pendejo"))){
 reply("Como tú, animal")
@@ -313,7 +357,7 @@ click https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] 
             let reason = user.afkReason || ''
             reply(`
 no lo etiquetes!
-Él está AFK ${reason ? 'con razón ' + reason : 'Sin razón'}
+Él está AFK ${reason ? 'Razón ' + reason : 'No contiene una razón'}
 Durante ${clockString(new Date - afkTime)}
 `.trim())
         }
@@ -321,8 +365,8 @@ Durante ${clockString(new Date - afkTime)}
         if (db.data.users[m.sender].afkTime > -1) {
             let user = global.db.data.users[m.sender]
             reply(`
-para AFK${user.afkReason ? ' después ' + user.afkReason : ''}
-Durante ${clockString(new Date - user.afkTime)}
+dejas de estar afk AFK${user.afkReason ? ' después ' + user.afkReason : ''}
+estuviste afk Durante ${clockString(new Date - user.afkTime)}
 `.trim())
             user.afkTime = -1
             user.afkReason = ''
@@ -332,7 +376,7 @@ Durante ${clockString(new Date - user.afkTime)}
                 let user = global.db.data.users[m.sender]
                 user.afkTime = + new Date
                 user.afkReason = text
-                reply(`${m.pushName} Posee Afk${text ? ': ' + text : ''}`)
+                reply(`${m.pushName} Ahora posee afk ${text ? ': ' + text : ''}`)
             }
             break	
             case 'suitpvp': case 'suit': {
@@ -347,7 +391,7 @@ Durante ${clockString(new Date - user.afkTime)}
             if (!m.mentionedJid[0]) return reply(`_a quien quieres desafiar?_\nEtiqueta a la persona..\n\nEjemplo : ${prefix}suit @${owner[1]}`, m.chat, { mentions: [owner[1] + '@s.whatsapp.net'] })
             if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0]))) reply `La persona a la que estás desafiando está jugando con alguien más. :(`
             let id = 'suit_' + new Date() * 1
-            let caption = `_*SUIT PvP*_
+            let caption = `_*PvP*_
 
 @${m.sender.split`@`[0]} desafiante @${m.mentionedJid[0].split`@`[0]} jugar pvp
 
@@ -385,7 +429,7 @@ Por favor @${m.mentionedJid[0].split`@`[0]} escribir aceptar/no`
                 }
             }
             break
-            case 'kuismath': case 'math': {
+            case 'mathpbs': case 'math': {
             	if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endGLimit) // respon ketika limit habis
 		            db.data.users[m.sender].limit -= 1 // -1 limit
                 if (kuismath.hasOwnProperty(m.sender.split('@')[0])) throw "Todavía hay sesiones sin terminar!"
@@ -413,7 +457,7 @@ Por favor @${m.mentionedJid[0].split`@`[0]} escribir aceptar/no`
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
             let ments = [me, jodoh]
             let buttons = [
-                        { buttonId: 'pareja', buttonText: { displayText: 'mi alma gemela' }, type: 1 }
+                        { buttonId: '👀', buttonText: { displayText: '👀' }, type: 1 }
                     ]
                     await yol.sendButtonText(m.chat, buttons, jawab, yol.user.name, floc, {mentions: ments})
             }
@@ -428,7 +472,7 @@ Por favor @${m.mentionedJid[0].split`@`[0]} escribir aceptar/no`
 @${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
             let menst = [orang, jodoh]
             let buttons = [
-                        { buttonId: 'amigos', buttonText: { displayText: 'crear amigos' }, type: 1 }
+                        { buttonId: '👀', buttonText: { displayText: '👀' }, type: 1 }
                     ]
                     await yol.sendButtonText(m.chat, buttons, jawab, yol.user.name, fdoc, {mentions: menst})
             }
@@ -455,8 +499,26 @@ Por favor @${m.mentionedJid[0].split`@`[0]} escribir aceptar/no`
           reply(`Exif se ha cambiado con éxito a\n\n Packname : ${global.packname}\n Author : ${global.author}`)
             }
             break
+case 'take':case 'wm':{
+if (!quoted) return reply(`Enviar/Responder imagen/video con subtítulo ${prefix + command}\n\nDuración del sticker video 1-9 segundos☕`)
+if (!text) return reply(`Enviar pedidos ${prefix + command} packname|author`)
+if (!text.includes('|')) return reply(`Enviar pedidos ${prefix + command} packname|author`)
+if (/image/.test(mime)) {
+let media = await quoted.download()
+let encmedia = await yol.sendImageAsSticker(m.chat, media, m, { packname: text.split("|")[0], author: text.split("|")[1] })
+await fs.unlinkSync(encmedia)
+} else if (/video/.test(mime)) {
+if ((quoted.msg || quoted).seconds > 11) return reply(`Enviar/Responder imagen/video con comando ${prefix + command}\n\nDuración de la etiqueta de video 1-9 segundos☕`)
+let media = await quoted.download()
+let encmedia = await yol.sendVideoAsSticker(m.chat, media, m, { packname: text.split("|")[0], author: text.split("|")[1] })
+await fs.unlinkSync(encmedia)
+} else {
+reply(`Enviar/Responder imagen/video con subtítulo ${prefix + command}\n\nDuración de la etiqueta de video 1-9 segundos☕`)
+}
+}
+break
 	case 'kick': {
-        if (!text) throw 'menciona a quien deseas eliminar'
+        if (!text) throw 'Menciona a alguien, ejemplo: @⁨WhatsApp⁩'
 		if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
@@ -540,16 +602,16 @@ Por favor @${m.mentionedJid[0].split`@`[0]} escribir aceptar/no`
                 reply(mess.success)
                 }
                 break
-            case 'tagall': {
+            case 'tagall': case 'infoall':
                 if (!m.isGroup) throw mess.group
                 if (!isAdmins) throw mess.admin
-let teks = ` *👥 Tag All*\n\n`
-                for (let mem of participants) {
-                teks += `➲ ${q ? q : ''} @${mem.id.split('@')[0]}\n`
-                }
-                yol.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: fgif })
-                }
-                break
+                let tekss = `══✪〘 *👥 Mención All* 〙✪══\n\n➲ *Mensaje : ${q ? q : 'Ninguno'}*\n\n`
+		      	for (let mem of participants) {
+		            tekss += `🏅 @${mem.id.split('@')[0]}\n`
+				}
+                tekss += `\n⋙ *${botname}* ⋘`
+                yol.sendMessage(from, { text: tekss, mentions: participants.map(a => a.id) }, { quoted: fkontak })
+            break
                 case 'hidetag': {
             if (!m.isGroup) throw mess.group
             if (!isAdmins) throw mess.admin
@@ -837,7 +899,7 @@ break
                 }
             }
             break
-            case 'delete': case 'del': {
+            case 'delete': case 'deletemsg': {
                 if (!m.quoted) throw false
                 let { chat, fromMe, id, isBaileys } = m.quoted
                 if (!isBaileys) throw 'solo a mensajes enviados por mi!'
@@ -949,12 +1011,12 @@ break
             reply(mess.wait)
                     if (/image/.test(mime)) {
                 let media = await quoted.download()
-                let encmedia = await yol.sendImageAsSticker(m.chat, media, fkontak, { packname: global.packname, author: global.author })
+                let encmedia = await yol.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
                 await fs.unlinkSync(encmedia)
             } else if (/video/.test(mime)) {
                 if ((quoted.msg || quoted).seconds > 11) return reply('Máximo 10 segundos!')
                 let media = await quoted.download()
-                let encmedia = await yol.sendVideoAsSticker(m.chat, media, fkontak, { packname: global.packname, author: global.author })
+                let encmedia = await yol.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
                 await fs.unlinkSync(encmedia)
             } else {
                 throw `Enviar imagen/video con cmd ${prefix + command}\nDuracion Video 1-9 segundos`
@@ -977,41 +1039,272 @@ break
             reply(db)
         }
         break
-case 'simi':
-let teks = args.join(' ');
-let anu = await fetchJson(`https://api-alc.herokuapp.com/api/other/simi?text=${teks}&apikey=ConfuMods`)
-let res = anu.result;
-reply(res)
+case 'simi':{
+let anu = await fetchJson(`https://api.simsimi.net/v2/?text=${text}&lc=es&cf=false`)
+let res = anu.success;
+m.reply(res)
+}
 break
+case 'lirica': case 'lyric': {
+if (!text) throw `y el nombre?`
+m.reply(mess.wait)
+webapi = await fetchJson(`https://kanza-api.herokuapp.com/api/search/lirik?query=${text}&apikey=vm5LT3pPeLlGjwS5FoQV3ADVV`)
+let anu = webapi.result
+m.reply(anu)
+}
+break
+//by Thunder team
+case 'animesearch': { 
+reply(mess.wait)
+await fetchJson(`https://api.jikan.moe/v4/anime?q=${q}`)
+.then((res) =>{
+console.log(res)   
+let sections = []   
+  for (let i of res.data) {
+  const list = {title: `${i.title}`,
+  rows: [
+    {
+     title: `${i.title}\n\n`, 
+     rowId: `${prefix}animesearch2 ${i.mal_id}`,
+     description: `${i.synopsis}`
+    }, 
+    ]
+     }
+     sections.push(list)   
+     }
+  const sendm =  yol.sendMessage(
+      from, 
+      {
+       text: "Anime Search",
+       footer: "By Carlos",
+       title: "La base de datos está en este botón.",
+       buttonText: "Haga clic y vea los resultados de la búsqueda➡️",
+       sections
+      }, { quoted : m }
+    )  
+})
+}
+  break
+case 'animesearch2':{
+await fetchJson(`https://api.jikan.moe/v4/anime/${q}`)
+.then((res) => {
+let txt = `     Anime Search      \n\n*Título:* *${res.data.title}*\n*inglés:* *${res.data.title_english}*\n*japonés:* *${res.data.title_japanese}*\n*Tipo de animé:* *${res.data.type}*\n*Adaptación:* *${res.data.source}*\n*Total episodios:* *${res.data.episodes}*\n*Estado:* *${res.data.status}*\n*En curso:* *${res.data.airing ? 'Sí' : 'No'}*\n*Emitido:* *${res.data.aired.string}*\n*Duración:* *${res.data.duration}*\n*Clasificación:* *${res.data.rating}*\n*Puntaje:* *${res.data.score}*\n*Rango:* *${res.data.rank}*\n*Productor Principal:* *${res.data.producers.name}*\n*Estudio:* *${res.data.studios[0].name}* `
+yol.sendMessage(from, { image : { url : res.data.images.jpg.image_url}, caption : txt}, {quoted :m }) 
+})
+}
+break
+  case 'backup':
+  if (!isCreator) return reply(mess.owner)
+  yol.sendMessage(sender, { document: fs.readFileSync('./database/database.json'), mimetype: 'json', caption: 'Una petición de : Owner', mentions: []}, { quoted: m })
+  break
+case 'glitch':
+case 'tiktokefect':
+case 'ttlogo':{
+	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //ae
+		db.data.users[m.sender].limit -= 1 // -1 limit
+reply(mess.wait)
+if (!text) return reply(`usa ${prefix + command} text1|text2`)
+teks1 = text.split('|')[0] ? text.split('|')[0] : '-'
+teks2 = text.split('|')[1] ? text.split('|')[1] : '-'
+	buffer = await getBuffer(`https://api.violetics.pw/api/textpro/glitchtext?apikey=beta&text=${teks1}&text2=${teks2}`)
+	yol.sendImage(m.chat, buffer, mess.succes, m)
+	}
+	break
+case 'leonlogo':
+case 'logoleon':
+case 'leonlg':{
+	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //ae
+		db.data.users[m.sender].limit -= 1 // -1 limit
+reply(mess.wait)
+if (!text) return reply(`usa ${prefix + command} text1|text2`)
+teks1 = text.split('|')[0] ? text.split('|')[0] : '-'
+teks2 = text.split('|')[1] ? text.split('|')[1] : '-'
+	buffer = await getBuffer(`https://api.violetics.pw/api/textpro/lion-mascot?apikey=0567-17a1-1747&text=${teks1}&text2=${teks2}`)
+	yol.sendImage(m.chat, buffer, mess.succes, m)
+	}
+	break
+case 'lisatxt':{
+	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //ae
+		db.data.users[m.sender].limit -= 1 // -1 limit
+reply(mess.wait)
+if (!text) return reply(`usa ${prefix + command} text1|text2`)
+teks1 = text.split('|')[0] ? text.split('|')[0] : '-'
+	buffer = await getBuffer(`http://brizas-api.herokuapp.com/imgeffect/lisapresentation?apikey=brizaloka&text=${teks1}`)
+	yol.sendImage(m.chat, buffer, mess.succes, m)
+	}
+	break
+case 'sings':{
+	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //ae
+		db.data.users[m.sender].limit -= 1 // -1 limit
+reply(mess.wait)
+if (!text) return reply(`usa ${prefix + command} text1|text2`)
+text1 = text.split('|')[0] ? text.split('|')[0] : '-'
+text2 = text.split('|')[1] ? text.split('|')[1] : '-'
+	buffer = await getBuffer(`https://api.violetics.pw/api/photofunia/arrow-signs?apikey=0567-17a1-1747&text1=${text1}&text2=${text2}`)
+	yol.sendImage(m.chat, buffer, mess.succes, m)
+	}
+	break
+case 'breakingnew':
+case 'breakingnews':
+case 'bnews':{
+	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //ae
+		db.data.users[m.sender].limit -= 1 // -1 limit
+reply(mess.wait)
+if (!text) return reply(`usa ${prefix + command} titulo principal|canal|subtítulo`)
+teks1 = text.split('|')[0] ? text.split('|')[0] : '-'
+teks2 = text.split('|')[1] ? text.split('|')[1] : '-'
+teks3 = text.split('|')[2] ? text.split('|')[2] : '-'
+	buffer = await getBuffer(`https://api.violetics.pw/api/photofunia/breaking-news?apikey=0567-17a1-1747&title1=${teks1}&channel=${teks2}&title2=${teks3}`)
+	yol.sendImage(m.chat, buffer, mess.succes, m)
+	}
+	break
+case 'retrowb':{
+	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //ae
+		db.data.users[m.sender].limit -= 1 // -1 limit
+reply(mess.wait)
+if (!text) return reply(`usa ${prefix + command} txt1|txt2|txt3`)
+teks1 = text.split('|')[0] ? text.split('|')[0] : '-'
+teks2 = text.split('|')[1] ? text.split('|')[1] : '-'
+teks3 = text.split('|')[2] ? text.split('|')[2] : '-'
+	buffer = await getBuffer(`https://api.violetics.pw/api/photofunia/retro-wave?apikey=beta&text1=${teks1}&text2=${teks2}&text3=${teks3}`)
+	yol.sendImage(m.chat, buffer, mess.succes, m)
+	}
+	break
+case 'diploma':{
+	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //ae
+		db.data.users[m.sender].limit -= 1 // -1 limit
+reply(mess.wait)
+if (!text) return reply(`usa ${prefix + command} titulo Universidad|años|nombre|grado|presidente|vicepresidente`)
+teks1 = text.split('|')[0] ? text.split('|')[0] : '-'
+teks2 = text.split('|')[1] ? text.split('|')[1] : '-'
+teks3 = text.split('|')[2] ? text.split('|')[2] : '-'
+teks4 = text.split('|')[3] ? text.split('|')[3] : '-'
+teks5 = text.split('|')[4] ? text.split('|')[4] : '-'
+teks6 = text.split('|')[5] ? text.split('|')[5] : '-'
+	buffer = await getBuffer(`https://api.violetics.pw/api/photofunia/diploma?apikey=beta&UniversityName=${teks1}&year=${teks2}&Name=${teks3}&Degree=${teks4}&President=${teks5}&VicePresident=${teks6}`)
+	yol.sendImage(m.chat, buffer, mess.succes, m)
+	}
+	break
+case 'esfrase':{
+	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //ae
+		db.data.users[m.sender].limit -= 1 // -1 limit
+reply(mess.wait)
+if (!text) return reply(`usa ${prefix + command} texto1|texto2|texto3|texto4|texto5`)
+teks1 = text.split('|')[0] ? text.split('|')[0] : '-'
+teks2 = text.split('|')[1] ? text.split('|')[1] : '-'
+teks3 = text.split('|')[2] ? text.split('|')[2] : '-'
+teks4 = text.split('|')[3] ? text.split('|')[3] : '-'
+teks5 = text.split('|')[4] ? text.split('|')[4] : '-'
+	buffer = await getBuffer(`https://api.violetics.pw/api/photofunia/keep_calm?apikey=beta&line1=${teks1}&line2=${teks2}&line3=${teks3}&line4=${teks4}&line5=${teks5}`)
+	yol.sendImage(m.chat, buffer, mess.succes, m)
+	}
+	break
+case 'ttpcustom':{
+    reply(mess.wait)
+	if (!text) return reply(`Ejemplo : ${prefix + command} color|texto`)
+	clr = text.split('|')[0] ? text.split('|')[0] : '-'
+	tek = text.split('|')[1] ? text.split('|')[1] : '-'
+           await yol.sendMedia(m.chat, `https://hardianto.xyz/api/ttpcustom?text=${tek}&color=${clr}&apikey=hardianto`, m, {asSticker: true})
+	}
+break
+case 'colorfulpubg':{
+	if (!text) return reply(`Ex: ${prefix + command} nombre|color\nusa: ${prefix + command} carlos|pink-yellow`)
+	if (!text.includes('|')) return reply(`Ex: ${prefix + command} nombre|color\nUso: ${prefix + command} carlos|pink-yellow`)
+var mon = args.join(' ')
+var m1 = mon.split("|")[0]
+var m2 = mon.split("|")[1]
+	const style = ['gold','green-blue','pink-yellow','green-yellow','cyan-purple','orange-red']
+if (!style.includes(m2)){ 
+let listt = `*El color que ingresaste es incorrecto*\n\n_Aquí hay una lista de los colores correctos, Total_ *${style.length}* _color_\n\n`
+no = 0
+for (var i = 0; i < style.length; i++) {
+no +=1
+listt += no.toString() + '.  '  + style[i] + '\n'
+}
+reply(listt)
+} else {
+	reply(mess.wait)
+let textpro2 = (api('alfa', '/api/ephoto360/'+command, {text: m1, color : m2}, 'apikey'))
+yol.sendMessage(from, {image:{ url: textpro2}, caption: lang.ok()}, {quoted:m})
+}}
+
+	break
+            case 'SsWeb': case 'ssweb': case 'Ssweb': case 'ScreenshotWeb': case 'screenshotweb':{
+                 if (!text) throw `Ejemplo: *${prefix + command} https://github.com/CarlosTwT*`
+                 reply(mess.wait)
+                 yol.sendMessage(m.chat, {image: {url: "https://api.akuari.my.id/other/ssweb?link="+text}})
+            }
+            break
+      case 'tonto':
+      case 'cerdo':
+      case 'idiota':
+      case 'gil':
+      case 'lesbian':
+      case 'puto':
+      case 'noob':
+      case 'estupendo':
+      case 'hachero':
+      case 'elegante':
+      case 'hermoso':
+      case 'pequeño':
+      case 'sexy':
+      case 'hot': {
+            if (!m.isGroup) return reply(`${mess.group}`)
+            let member = participants.map(u => u.id)
+            let me = m.sender
+            let jodoh = member[Math.floor(Math.random() * member.length)]
+            let jawab = `El más *${command}* es @${jodoh.split('@')[0]}`
+            let ments = [me, jodoh]
+            let buttons = [
+                        { buttonId: '👀', buttonText: { displayText: '👀' }, type: 1 }
+                    ]
+                    await yol.sendButtonText(m.chat, buttons, jawab, footer, m, {mentions: ments})
+            }
+            break
+case 'morir':
+              if (!q) return reply(`¡No válido!\n\n¿que nombre quieres saber en que fecha morirá??`)
+              predea = await axios.get(`https://api.agify.io/?name=${q}`)
+              reply(`NOMBRE : ${predea.data.name}\n*muerto a la edad :* ${predea.data.age} Años.\n\n_Date prisa, arrepiéntete, hermano, porque nadie sabe de la muerte.`)
+              break
 case 'textoinvert': case 'invertirtxt': {
-if (args.length < 1) return reply(`Ejemplo:\n${prefix}fliptext MyMans`)
+if (args.length < 1) return reply(`Ejemplo:\n${prefix}fliptext MyCrls`)
 quere = args.join(" ")
 flipe = quere.split('').reverse().join('')
 reply(`\`\`\`「 TEXTO INVERTIDO 」\`\`\`\n*•> Normal :*\n${quere}\n*•> Invertido :*\n${flipe}`)
 }
 break
-case 'convertid': case 'terjemahan': {
-if (!args.join(" ")) return reply("y el texto?")
-tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=id&kata=${args.join(" ")}`)
+case 'traductor': case 'traductores': {
+if (!args.join(" ")) return reply("Coloca un texto en cualquier idioma, lo traduciré al español :)")
+tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=es&kata=${args.join(" ")}`)
 Infoo = tes.info
 Detek = tes.translate
-reply(`🌐Traducir : ${Detek}\n📘Resultados : ${Infoo}`)
+reply(`📘traducción : ${Infoo}`)
 }
 break
-case 'solicitar': {
-if (!args.join(" ")) return reply(`Ejemplo : ${prefix + command} min agregar una función de descarga`)
-let teks = `*| SOLICITAR CARACTERÍSTICAS |*`
-let teks1 = `\n\nNúmero : @${m.sender.split("@")[0]}\nRequest : ${args.join(" ")}`
-let teks2 = `\n\nEnvío correcto al propietario`
-for (let i of owner) {
-yol.sendMessage(i + "@s.whatsapp.net", {text: teks + teks1, mentions:[m.sender]}, {quoted:fgif})
-}
-yol.sendMessage(m.chat, {text: teks + teks2 + teks1, mentions:[m.sender]}, {quoted:fgif})
-}
+case 'cosplay':
+teks = `aquí men >\\<`
+buffer = `https://api.zacros.my.id/randomimg/cosplay`
+yol.sendMessage(from, {image:{url:buffer}, caption:"👀!"}, {quoted:m})
 break
 	       case 'attp': case 'ttp': {
            if (!text) throw `Ejemplo : ${prefix + command} texto`
            await yol.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${text}`, 'carlos', 'Op', st, {asSticker: true})
+
+         }
+         break
+	       case 'attpgrad': case 'attpgradient': {
+	       	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //ae
+		db.data.users[m.sender].limit -= 1 // -1 limit       
+           if (!text) throw `Ejemplo : ${prefix + command} texto`
+           await yol.sendMedia(m.chat, `https://api.violetics.pw/api/canvas/attp-gradient2?apikey=beta&text=${text}`, 'carlos', 'Op', st, {asSticker: true})
+
+         }
+         break
+	       case 'dado': case 'dados': {
+	       	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //ae
+		db.data.users[m.sender].limit -= 1 // -1 limit
+           reply(mess.wait)
+           await yol.sendMedia(m.chat, `https://api.violetics.pw/api/random/dadu?apikey=beta`, 'carlos', 'Op', st, {asSticker: true})
 
          }
          break
@@ -1029,7 +1322,7 @@ try{
   }
 let ingfo = `*INFO GRUPO*\n\n*Nombre :* ${groupName}\n*ID Grupo :* ${m.chat}\n*Creado el :* ${moment(`${groupMetadata.creation}` * 1000).tz('America/Guayaquil').format('DD/MM/YYYY HH:mm:ss')}\n*Creador:* @${groupMetadata.owner.split('@')[0]}\n*Numero de admins :* ${groupAdmins.length}\n*Participantes :* ${participants.length}\n*Descripción :* \n${groupMetadata.desc}`
 ds = await getBuffer(pic)
-yol.sendMessage(m.chat, { image: ds,caption: ingfo, mentions: [groupMetadata.owner] }, { quoted: fgif})
+yol.sendMessage(m.chat, { image: ds,caption: ingfo, mentions: [groupMetadata.owner] }, { quoted: m})
 break
 case 'mode': case 'set': {
         const buttons = [
@@ -1057,19 +1350,24 @@ headerType: 1
 	        let { floNime } = require('./lib/uploader')
 	        let fatGans = await floNime(dwnld)
 	        let smeme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas)}/${encodeURIComponent(bawah)}.png?background=${fatGans.result.url}`
-	        let FaTiH = await yol.sendImageAsSticker(m.chat, smeme, fkontak, { packname: global.packname, author: global.auhor })
+	        let FaTiH = await yol.sendImageAsSticker(m.chat, smeme, m, { packname: global.packname, author: global.auhor })
 	        await fs.unlinkSync(FaTiH)
             }
 	       break
-	    case 'emojimix2': {
-	    if (!text) throw `Ejemplo : ${prefix + command} 😅`
-		let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(text)}`)
-		for (let res of anu.results) {
-		    let encmedia = await yol.sendImageAsSticker(m.chat, res.url, st, { packname: global.packname, author: global.author, categories: res.tags })
-		    await fs.unlinkSync(encmedia)
-		}
-	    }
-	    break
+case 'emojimix': {
+if (!args.join(" ")) return m.reply(`Ejemplo : ${prefix + command} 😅`)
+try {
+let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(text)}`)
+for (let res of anu.results) {
+let encmedia = await yol.sendImageAsSticker(sender, res.url, m, { packname: global.packname, author: global.author, categories: res.tags })
+await fs.unlinkSync(encmedia)
+}
+m.reply('Ve al chat privado del bot para ver los stickers') 
+} catch {
+m.reply("Extraviado!")
+}
+}
+break
 case 'kitzia':{
                 respon = `HOLAAAAA`
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -1299,7 +1597,7 @@ case 'adioslepidoxdddd':
 				if (!q) return reply(`Usar ${command} texto\n\nEjemplo : ${command} soy god?`)
 					const apa = ['Si', 'No', 'Talvez', 'Creo que sí']
 					const kah = apa[Math.floor(Math.random() * apa.length)]
-yol.sendMessage(from, { text: `Pregunta : ${q}\nRespuesta : ${kah}` }, { quoted: verificado })
+yol.sendMessage(from, { text: `Pregunta : ${q}\nRespuesta : ${kah}` }, { quoted: m })
 
 					break
             case 'react': {
@@ -1328,7 +1626,7 @@ case 'califica':
 				if (!q) return reply(`Usar ${command} text\n\nEjemplo : ${command} mi foto`)
 					const ra = ['0', '10', '15' ,'20', '25','30','35','40','45','50','55','60','65','70','75','80','85','90','100']
 					const te = ra[Math.floor(Math.random() * ra.length)]
-yol.sendMessage(from, { text: `Calificando: ${q}\nLe pongo un: *${te}%*` }, { quoted: verificado })
+yol.sendMessage(from, { text: `Calificando: ${q}\nLe pongo un: *${te}%*` }, { quoted: m })
 
 					break
             case 'gay': {
@@ -1340,9 +1638,9 @@ yol.sendMessage(from, { text: `Calificando: ${q}\nLe pongo un: *${te}%*` }, { qu
  @${jodoh.split('@')[0]} es gay🏳️‍🌈`
             let ments = [me, jodoh]
             let buttons = [
-                        { buttonId: 'gay', buttonText: { displayText: 'detectar gay' }, type: 1 }
+                        { buttonId: '👀', buttonText: { displayText: '👀' }, type: 1 }
                     ]
-                    await yol.sendButtonText(m.chat, buttons, jawab, yol.user.name, verificado, {mentions: ments})
+                    await yol.sendButtonText(m.chat, buttons, jawab, yol.user.name, m, {mentions: ments})
             }
             break
 case 'sitiosx':
@@ -1373,11 +1671,22 @@ case 'miname':
 if (!text) throw `eres ${pushname} `
 
       break
-case 'instagram':
-
-if (!text) throw `https://instagram.com/c4rl0s_9e`
-
-      break
+case 'instagram': {
+const templateMessage = {
+text: '*Mi instagram abajo👀*',footer: `sigueme🧞`,
+templateButtons: [
+{
+index: 1, 
+urlButton: {
+displayText: 'Instagram', 
+url: `https://instagram.com/c4rl0s_9e`
+}
+},
+],
+}
+const sendm = yol.sendMessage(from, templateMessage)
+}
+break
 case 'serbot':
 
 if (!text) throw `😂 NO GRACIAS BRO`
@@ -1395,8 +1704,8 @@ if (!text) throw `😂 NO GRACIAS BRO`
 	    }
 	    break
             case 'toimage': case 'toimg': {
-                if (!quoted) throw 'Reply Imagen'
-                if (!/webp/.test(mime)) throw `responde una img con cmd *${prefix + command}*`
+                if (!quoted) throw 'Reply sticker'
+                if (!/webp/.test(mime)) throw `responde un sticker con cmd *${prefix + command}*`
                 reply(mess.wait)
                 let media = await yol.downloadAndSaveMediaMessage(quoted)
                 let ran = await getRandom('.png')
@@ -1404,19 +1713,19 @@ if (!text) throw `😂 NO GRACIAS BRO`
                     fs.unlinkSync(media)
                     if (err) throw err
                     let buffer = fs.readFileSync(ran)
-                    yol.sendMessage(m.chat, { image: buffer }, { quoted: fkontak })
+                    yol.sendMessage(m.chat, { image: buffer }, { quoted: m })
                     fs.unlinkSync(ran)
                 })
             }
             break
 	        case 'tomp4': case 'tovideo': {
                 if (!quoted) throw 'Reply sticker en movimiento'
-                if (!/webp/.test(mime)) throw `sticker en movimiento con el cmd *${prefix + command}*`
+                if (!/webp/.test(mime)) throw `responde un stickergif con el cmd *${prefix + command}*`
                 reply(mess.wait)
 		let { webp2mp4File } = require('./lib/uploader')
                 let media = await yol.downloadAndSaveMediaMessage(quoted)
                 let webpToMp4 = await webp2mp4File(media)
-                await yol.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' } }, { quoted: fvideo })
+                await yol.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' } }, { quoted: m })
                 await fs.unlinkSync(media)
             }
             break
@@ -1458,7 +1767,7 @@ if (!text) throw `😂 NO GRACIAS BRO`
 		let { webp2mp4File } = require('./lib/uploader')
                 let media = await yol.downloadAndSaveMediaMessage(quoted)
                 let webpToMp4 = await webp2mp4File(media)
-                await yol.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' }, gifPlayback: true }, { quoted: fgif })
+                await yol.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' }, gifPlayback: true }, { quoted: m })
                 await fs.unlinkSync(media)
             }
             break
@@ -1495,7 +1804,7 @@ if (!text) throw `😂 NO GRACIAS BRO`
 	      scale: "100%",
 	      outputFile 
 	    }).then(async result => {
-	    yol.sendMessage(m.chat, {image: fs.readFileSync(outputFile), caption: mess.success}, { quoted : verificado })
+	    yol.sendMessage(m.chat, {image: fs.readFileSync(outputFile), caption: mess.success}, { quoted : m })
 	    await fs.unlinkSync(localFile)
 	    await fs.unlinkSync(outputFile)
 	    })
@@ -1515,28 +1824,54 @@ if (!text) throw `😂 NO GRACIAS BRO`
                 })
                 }
                 break
-        case 'gimage': {
+        case 'googleimg': {
         if (!text) throw `Ejemplo : ${prefix + command} cocacola`
         let gis = require('g-i-s')
         gis(text, async (error, result) => {
         n = result
         images = n[Math.floor(Math.random() * n.length)].url
         let buttons = [
-                    {buttonId: `gimage ${text}`, buttonText: {displayText: 'Next Imagen'}, type: 1}
+                    {buttonId: `googleimg ${text}`, buttonText: {displayText: 'Next Imagen'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: images },
-                    caption: `*-------「 GIMAGE SEARCH 」-------*
+                    caption: `*-------「 GOOGLE IMG SEARCH 」-------*
 🤠 *Consulta* : ${text}
 🔗 *Url* : ${images}`,
                     footer: yol.user.name,
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
         })
         }
         break
+case 'play2': case 'ytplay2': {
+if (!args.join(" ")) return m.reply(`Envia el nombre de la música, ejemplo : ${prefix + command} Fatalidad Julio Jaramillo`)
+let yts = require("yt-search")
+let search = await yts(args.join(" "))
+listSerch = []
+teskd = `\nResultados de *${args.join(" ")}* \n\n`
+for (let i of search.all) {
+listSerch.push({
+title: i.title, rowId: `ytmp3 ${i.url}`, descripción: `Autor : ${i.author.name} / ${i.timestamp}`})
+}
+const sections = [
+{
+title: "Total de busquedas: " + search.all.length,
+rows: listSerch
+}
+]
+const listMessage = {
+text: teskd,
+footer: "© By Carlos - X - ī.am/𝙲𝚛𝚕𝚜ꪶ͢sєrꫂ⁩",
+title: "     「 Youtube Downloader 」",
+buttonText: "Click aquí",
+sections
+}
+yol.sendMessage(from, listMessage, {quoted:m})
+}
+break
 	    case 'ytsearch': {
                 if (!text) throw `Ejemplo : ${prefix + command} nombre de video`
                 let yts = require("yt-search")
@@ -1546,10 +1881,12 @@ if (!text) throw `😂 NO GRACIAS BRO`
                 for (let i of search.all) {
                     teks += `⭔ Num : ${no++}\n⭔ Tipo : ${i.type}\n⭔ Video ID : ${i.videoId}\n⭔ Titulo : ${i.title}\n⭔ Views : ${i.views}\n⭔ Duracion : ${i.timestamp}\n⭔ subido hace : ${i.ago}\n⭔ Autor : ${i.author.name}\n⭔ Url : ${i.url}\n\n─────────────────\n\n`
                 }
-                yol.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: verificado })
+                yol.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
             }
             break
 	    case 'play': case 'ytplay': {
+	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //ae
+		db.data.users[m.sender].limit -= 1 // -1 limit
                 if (!text) throw `Ejemplo : ${prefix + command} Fatalidad`
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -1579,40 +1916,51 @@ message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { uplo
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '🎵Audio🎵',
+                                    displayText: '🎵 320kbps',
                                     id: `ytmp3 ${anu.url} 320kbps`
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: '📹 360p',
+                                    id: `ytmp4 ${anu.url} 360p`
                                     }
                                 },{quickReplyButton: {
-                                    displayText: '🎥VIdeo🎥',
-                                    id: `ytmp4 ${anu.url} 360p`
+                                    displayText: 'Mas resultados',
+                                    id: `play2 ${anu.url}`
                                 }
                             }]
                         }
                     }
-                }), { userJid: m.chat, quoted: fkontak })
+                }), { userJid: m.chat, quoted: m })
                   yol.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
 	    case 'ytmp3': case 'ytaudio': {
+	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) // respon ketika limit habis
+		db.data.users[m.sender].limit -= 1 // -1 limit
                 let { yta } = require('./lib/y2mate')
                 if (!text) throw `Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 100000) return reply('Archivo por encima del límite '+util.format(media))
                 yol.sendImage(m.chat, media.thumb, ` Titulo : ${media.title}\n tamaño : ${media.filesizeF}\n Url : ${isUrl(text)}\n Ext : MP3\n Resolucion : ${args[1] || '128kbps'}`, m)
-                yol.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: fvn })
+                yol.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
             case 'ytmp4': case 'ytvideo': {
+            	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) // respon ketika limit habis
+		db.data.users[m.sender].limit -= 1 // -1 limit
                 let { ytv } = require('./lib/y2mate')
                 if (!text) throw `Ejemplo : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 100000) return reply('Archivo por encima del límite '+util.format(media))
-                yol.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: ` titulo : ${media.title}\n tamaño : ${media.filesizeF}\n Url : ${isUrl(text)}\n Ext : MP3\n Resolucion : ${args[1] || '360p'}` }, { quoted: fvideo })
+                yol.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: ` titulo : ${media.title}\n tamaño : ${media.filesizeF}\n Url : ${isUrl(text)}\n Ext : MP3\n Resolucion : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
-	    case 'play2': case 'ytplay2': {
+	    case 'play3': case 'ytplay3': {
+	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) // respon ketika limit habis
+		db.data.users[m.sender].limit -= 1 // -1 limit
                 if (!text) throw `Ejemplo : ${prefix + command} rebeldía`
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -1652,27 +2000,31 @@ message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { uplo
                             }]
                         }
                     }
-                }), { userJid: m.chat, quoted: fkontak })
+                }), { userJid: m.chat, quoted: m })
                   yol.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
 	    case 'mp3': case 'ytaudio2': {
+	    	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) // respon ketika limit habis
+		db.data.users[m.sender].limit -= 1 // -1 limit
                 let { yta } = require('./lib/y2mate')
                 if (!text) throw `ejemplo : ${prefix + command} https://youtu.be/9lfFspVTRtA 320kbps`
                 let quality = args[1] ? args[1] : '320kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('El tamaño del audio es demasiado grande '+util.format(media))
                 yol.sendImage(m.chat, media.thumb, `🟡 Titulo : ${media.title}\n🎀 Tamaño : ${media.filesizeF}\n📡 Url : ${isUrl(text)}\n📜 Ext : MP3\n📑 Resolución : ${args[1] || '320kbps'}`, m)
-                yol.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: fvn })
+                yol.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
             case 'mp4': case 'ytvideo2': {
+            	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) // respon ketika limit habis
+		db.data.users[m.sender].limit -= 1 // -1 limit
                 let { ytv } = require('./lib/y2mate')
                 if (!text) throw `Ejemplo : ${prefix + command} https://youtu.be/9lfFspVTRtA 360p`
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('El tamaño del video es demasiado grande '+util.format(media))
-                yol.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🌟 Titulo : ${media.title}\n👜 Tamaño : ${media.filesizeF}\n🌼 Url : ${isUrl(text)}\n🌍 Ext : MP3\n🔮 Resolución : ${args[1] || '360p'}` }, { quoted: fvideo })
+                yol.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🌟 Titulo : ${media.title}\n👜 Tamaño : ${media.filesizeF}\n🌼 Url : ${isUrl(text)}\n🌍 Ext : MP3\n🔮 Resolución : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
 	    case 'getmusic': {
@@ -1686,7 +2038,7 @@ message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { uplo
                 let media = await yta(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('Archivo por encima del límite '+util.format(media))
                 yol.sendImage(m.chat, media.thumb, ` Titulo : ${media.title}\n tamaño : ${media.filesizeF}\n Url : ${urls[text - 1]}\n Ext : MP3\n Resolucion : ${args[1] || '128kbps'}`, m)
-                yol.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: verificado })
+                yol.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
             case 'getvideo': {
@@ -1699,7 +2051,7 @@ message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { uplo
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('Archivo por encima del límite '+util.format(media))
-                yol.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: ` Titulo : ${media.title}\n tamaño : ${media.filesizeF}\n Url : ${urls[text - 1]}\n Ext : MP3\n Resolucion: ${args[1] || '360p'}` }, { quoted: verificado })
+                yol.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: ` Titulo : ${media.title}\n tamaño : ${media.filesizeF}\n Url : ${urls[text - 1]}\n Ext : MP3\n Resolucion: ${args[1] || '360p'}` }, { quoted: m })
             }
             break
             case 'pinterest': {
@@ -1707,14 +2059,14 @@ message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { uplo
 		let { pinterest } = require('./lib/scraper')
                 let anu = await pinterest(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
-                yol.sendMessage(m.chat, { image: { url: result }, caption: ' Media Url : '+result }, { quoted: fkontak })
+                yol.sendMessage(m.chat, { image: { url: result }, caption: ' Media Url : '+result }, { quoted: m })
             }
             break
 case 'anime': case 'husbu': case 'nekos': {
 	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) // respon ketika limit habis
 		db.data.users[m.sender].limit -= 1
                 reply(mess.wait)
-                yol.sendMessage(m.chat, { image: { url: api('riykey', '/api/random/'+command, {}, 'apikey') }, caption: 'Generar imagen aleatoria de ' + command }, { quoted: verificado })
+                yol.sendMessage(m.chat, { image: { url: api('riykey', '/api/random/'+command, {}, 'apikey') }, caption: 'Generar imagen aleatoria de ' + command }, { quoted: m })
             }
             break 
           case 'loli': case 'Loli': {
@@ -1729,114 +2081,17 @@ case 'anime': case 'husbu': case 'nekos': {
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-          case 'nsfwloli': case 'lolinsfw': {
-                reply(mess.wait)
-            let buttons = [
-                    {buttonId: `nsfwloli`, buttonText: {displayText: 'Next Imagen'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: 'https://ryuu-apii.herokuapp.com/api/wallpaper/nsfwloli?apikey=RyuBotz' },
-                    caption: `No es mi responsabilidad que busques esto...`,
-                    footer: yol.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
-            }
-            break
-          case 'ahegeo': case 'nsfwahegeo': {
-                reply(mess.wait)
-            let buttons = [
-                    {buttonId: `nsfwahegeo`, buttonText: {displayText: 'Next Imagen'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: 'https://ryuu-apii.herokuapp.com/api/nsfw/ahegao?apikey=RyuBotz' },
-                    caption: ` 😛`,
-                    footer: yol.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
-            }
-            break
-          case 'ass': case 'nsfwass': {
-                reply(mess.wait)
-            let buttons = [
-                    {buttonId: `nsfwass`, buttonText: {displayText: 'Next Imagen'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: 'https://ryuu-apii.herokuapp.com/api/nsfw/ass?apikey=RyuBotz' },
-                    caption: ` Por que les encanta esto jeje?`,
-                    footer: yol.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
-            }
-            break
-          case 'bdsm': case 'nsfwbdsm': {
-                reply(mess.wait)
-            let buttons = [
-                    {buttonId: `bdsm`, buttonText: {displayText: 'Next Imagen'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: 'https://ryuu-apii.herokuapp.com/api/nsfw/bdsm?apikey=RyuBotz' },
-                    caption: ` Especial para tí`,
-                    footer: yol.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
-            }
-            break
-          case 'nsfwblowjob': case 'blowjobnsfw': {
-                reply(mess.wait)
-            let buttons = [
-                    {buttonId: `nsfwblowjob`, buttonText: {displayText: 'Next Imagen'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: 'https://ryuu-apii.herokuapp.com/api/nsfw/blowjob?apikey=RyuBotz' },
-                    caption: ` 😳mira lo que he encontrado`,
-                    footer: yol.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
-            }
-            break
-          case 'cuckold': case 'nsfwcuckold': {
-                reply(mess.wait)
-            let buttons = [
-                    {buttonId: `cuckold`, buttonText: {displayText: 'Next Imagen'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: 'https://ryuu-apii.herokuapp.com/api/nsfw/cuckold?apikey=RyuBotz' },
-                    caption: ` Random cuckold`,
-                    footer: yol.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
-            }
-            break
-          case 'cumnsfw': case 'cumming': {
-                reply(mess.wait)
-            let buttons = [
-                    {buttonId: `cumming`, buttonText: {displayText: 'Next Imagen'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: 'https://ryuu-apii.herokuapp.com/api/nsfw/cum?apikey=RyuBotz' },
-                    caption: ` Pq me pides esto?`,
-                    footer: yol.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
-            }
-            break
+case 'pack':{
+            reply(mess.wait)
+            let anu = await fetchJson('https://raw.githubusercontent.com/darlyn1234/recursos/main/proyectosweb/hotgirl-darlyn.json')
+            let random = anu[Math.floor(Math.random() * anu.length)]
+            yol.sendMessage(m.chat, { image: { url: random.hot }, caption: `aqui ta` }, { quoted: m })
+        }
+        break
+
           case 'ero': case 'eronsfw': {
                 reply(mess.wait)
             let buttons = [
@@ -1849,89 +2104,14 @@ case 'anime': case 'husbu': case 'nekos': {
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
-            }
-            break
-          case 'fendom': case 'fendomnsfw': {
-                reply(mess.wait)
-            let buttons = [
-                    {buttonId: `fendom`, buttonText: {displayText: 'Next Imagen'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: 'https://ryuu-apii.herokuapp.com/api/nsfw/femdom?apikey=RyuBotz' },
-                    caption: ` Que Dios te perdone por pedirme esto`,
-                    footer: yol.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
-            }
-            break
-          case 'foot': case 'footnsfw': {
-                reply(mess.wait)
-            let buttons = [
-                    {buttonId: `foot`, buttonText: {displayText: 'Next Imagen'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: 'https://ryuu-apii.herokuapp.com/api/nsfw/foot?apikey=RyuBotz' },
-                    caption: ` 😛`,
-                    footer: yol.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
-            }
-            break
-          case 'gangbang': case 'gangbangnsfw': {
-                reply(mess.wait)
-            let buttons = [
-                    {buttonId: `gangbang`, buttonText: {displayText: 'Next Imagen'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: 'https://ryuu-apii.herokuapp.com/api/nsfw/gangbang?apikey=RyuBotz' },
-                    caption: ` ⌛`,
-                    footer: yol.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
-            }
-            break
-          case 'glasses': case 'glassesh': {
-                reply(mess.wait)
-            let buttons = [
-                    {buttonId: `glasses`, buttonText: {displayText: 'Next Imagen'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: 'https://ryuu-apii.herokuapp.com/api/nsfw/glasses?apikey=RyuBotz' },
-                    caption: ` aquí está`,
-                    footer: yol.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
-            }
-            break
-          case 'hentain': case 'hentaint': {
-                reply(mess.wait)
-            let buttons = [
-                    {buttonId: `hentain`, buttonText: {displayText: 'Next Imagen'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: 'https://ryuu-apii.herokuapp.com/api/nsfw/hentai?apikey=RyuBotz' },
-                    caption: ` 🤖`,
-                    footer: yol.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
 				case 'waifu2': case 'loli2':
 					reply(mess.wait)
 					axios.get(`https://api.waifu.pics/sfw/waifu`)
 					.then(({data}) => {
-					yol.sendImage(m.chat, data.url, mess.success, verificado)
+					yol.sendImage(m.chat, data.url, mess.success, m)
 					})
 					break
 case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
@@ -1957,25 +2137,25 @@ case 'neko': case 'waifu':case 'trap':case 'blowjob':
 					break
             case 'avatar': {
                 reply(mess.wait)
-                yol.sendMessage(m.chat, { image: { url: api('bri', '/random/'+command, {}, 'apikey') }, caption: 'Generar imagen aleatoria de ' + command }, { quoted: verificado })
+                yol.sendMessage(m.chat, { image: { url: api('bri', '/random/'+command, {}, 'apikey') }, caption: 'Generar imagen aleatoria de ' + command }, { quoted: m })
             }
             break
             case 'smug2': {
                 reply(mess.wait)
-                yol.sendMessage(m.chat, { image: { url: 'https://hardianto.xyz/api/anime/random?sfw=smug&apikey=hardianto' }, caption: 'para que esta imagen se torne en movimiento conviertela a sticker😼\nRandom ' + command }, { quoted: verificado })
+                yol.sendMessage(m.chat, { image: { url: 'https://hardianto.xyz/api/anime/random?sfw=smug&apikey=hardianto' }, caption: 'para que esta imagen se torne en movimiento conviertela a sticker😼\nRandom ' + command }, { quoted: m })
             }
             break
             case 'imggif': {
                 reply(mess.wait)
-                yol.sendMessage(m.chat, { image: { url: 'https://hardianto.xyz/api/anime/random?sfw=nekoGif&apikey=hardianto' }, caption: 'para que esta imagen se torne en movimiento conviertela a sticker😼\nRandom ' + command }, { quoted: verificado })
+                yol.sendMessage(m.chat, { image: { url: 'https://hardianto.xyz/api/anime/random?sfw=nekoGif&apikey=hardianto' }, caption: 'para que esta imagen se torne en movimiento conviertela a sticker😼\nRandom ' + command }, { quoted: m })
             }
             break
 	    case 'imgpareja': {
                 reply(mess.wait)
                 let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
                 let random = anu[Math.floor(Math.random() * anu.length)]
-                yol.sendMessage(m.chat, { image: { url: random.male }, caption: `pareja hombre` }, { quoted: verificado })
-                yol.sendMessage(m.chat, { image: { url: random.female }, caption: `pareja mujer` }, { quoted: verificado })
+                yol.sendMessage(m.chat, { image: { url: random.male }, caption: `pareja hombre` }, { quoted: m })
+                yol.sendMessage(m.chat, { image: { url: random.female }, caption: `pareja mujer` }, { quoted: m })
             }
 	    break
             case 'coffe': case 'kopi': {
@@ -1989,7 +2169,7 @@ case 'neko': case 'waifu':case 'trap':case 'blowjob':
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
             case 'nekooo': case 'nekoo': {
@@ -2004,7 +2184,7 @@ case 'neko': case 'waifu':case 'trap':case 'blowjob':
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
             case 'foxgirl': {
@@ -2019,7 +2199,7 @@ case 'neko': case 'waifu':case 'trap':case 'blowjob':
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
             case 'gato': case 'cat': {
@@ -2034,9 +2214,26 @@ case 'neko': case 'waifu':case 'trap':case 'blowjob':
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
+case 'doge':
+case 'dogestick':{
+var ano = await fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
+var wifegerak = ano.split('\n')
+var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
+encmedia = await yol.sendImageAsSticker(from, wifegerakx, m, { packname: global.packname, author: global.author, })
+await fs.unlinkSync(encmedia)
+}
+break
+case 'animestick':{
+var ano = await fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestick')
+var wifegerak = ano.split('\n')
+var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
+encmedia = await yol.sendImageAsSticker(from, wifegerakx, m, { packname: global.packname, author: global.author, })
+await fs.unlinkSync(encmedia)
+}
+break
             case 'wallpaper2': case 'wallpaper-anime': {
                 reply(mess.wait)
             let buttons = [
@@ -2049,7 +2246,7 @@ case 'neko': case 'waifu':case 'trap':case 'blowjob':
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
             case 'wppanime': case 'wallpaper3': {
@@ -2064,7 +2261,7 @@ case 'neko': case 'waifu':case 'trap':case 'blowjob':
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
 case 'smeme': case 'stickermeme1': case 'stickmeme1': {
@@ -2076,7 +2273,7 @@ reply(mess.wait)
 mee = await yol.downloadAndSaveMediaMessage(quoted)
 mem = await TelegraPh(mee)
 meme = `https://api.memegen.link/images/custom/-/${text}.png?background=${mem}`
-memek = await yol.sendImageAsSticker(m.chat, meme, verificado, { packname: global.packname, author: global.author })
+memek = await yol.sendImageAsSticker(m.chat, meme, m, { packname: global.packname, author: global.author })
 await fs.unlinkSync(memek)
 }
 break
@@ -2102,7 +2299,7 @@ break
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
             case 'milf': {
@@ -2117,7 +2314,7 @@ break
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
             case 'wallpaper': {
@@ -2135,7 +2332,7 @@ break
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
             case 'wikimedia': {
@@ -2153,15 +2350,40 @@ break
                     buttons: buttons,
                     headerType: 4
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
             case '3d-effect': case '1917-style': case '3d-rubystone': case '3d-text-sub-zombie': case '3dengraved': case '3dluxury': case '3dlove': case '3dgolden': case '3dgradient': case '3dneonlight': case '3dpapercut': case '3drainbow': case '3drealistic': case '3dscifi': case '3dtext-effect': case '3dunderwater': case '3dwaterpipe': case 'alice-league-of-kings': case 'angel-wing-galaxy': case 'anubis': case 'arch-crossfire': case 'art-shader': case 'assassins-creed': case 'azzenka-league-of-kings':  case 'birthday-cards': case 'birthday-greeting': case 'birthday-roses': case 'black-metal': case 'blood-frosted': case 'blood-text': case 'blue-effect': case 'blue-glitter': case 'brickwall': case 'brokentext': case 'bubble-effect': case 'bulb-effect':  case 'circuit': case 'dark-gold-metal': case 'color-fireworks': case 'cool-metal': case 'decorated-cookie': case 'deluxe-gold': case 'dinamo': case 'deluxe-silver': case 'double-exposure': case 'dragon-fire': case 'eroded-metal': case 'firework':  case 'fox-crossfire': case 'fun-certify1': case 'fun-certify2': case 'futuristic': case 'galaxy-effect2': case 'galaxy-effect': case 'galaxy-angel': case 'galaxy-text': case 'galaxy-text-3': case 'gankk-league-of-kings': case 'genji-overwatch': case 'glossy': case 'glossy-bluemetal': case 'glossy-carbon': case 'glossy-chrome': case 'gold-avenger': case 'gold-barcar': case 'gold-batman': case 'gold-fox': case 'gold-bird2': case 'gold-eagle': case 'gold-effect': case 'gold-glitter': case 'gold-lion': case 'gold-lion2': case 'gold-star': case 'gold-tiger': case 'golden-letter': case 'gr-crossfire': case 'graffiti-color': case 'graffiti-text3': case 'graffiti-text5': case 'graffiti-text8': case 'graffiti-text4': case 'heart-birthday': case 'hanzo-overwatch': case 'greenhorror': case 'halloween-fire': case 'green-brush': case 'hero3-crossfire': case 'heart-cups': case 'holographic': case 'light-text':  case 'lend-text': case 'ledtext': case 'layeredtext': case 'lol-caitlyn': case 'lol-ahri': case 'logo-galaxy': case 'lol-fizz': case 'lol-ezreal-and-shen': case 'lol-fiora': case 'lol-draven': case 'lol-jinx': case 'lol-kalista': case 'lol-khazix': case 'lol-kogmaw': case 'lol-leesin': case 'lol-lux': case 'lol-master-yi': case 'lol-miss-fortune': case 'lol-nidalee': case 'lol-quinn': case 'lol-sona': case 'lol-riven': case 'lol-talon': case 'lol-thresh': case 'lol-vayne': case 'machines-effect': case 'lol-yasuo': case 'lol-zed': case 'lol-wukong': case 'magic-text': case 'mei-overwatch': case 'matrix-text': case 'magmatext': case 'metal-lion-2': case 'metal-headshot': case 'metal-avenger': case 'metal-real-madrid': case 'metal-star': case 'metal-superman': case 'metal-text-effect': case 'metallic-letter': case 'metalic': case 'metal-wolf-2': case 'mganga-league-of-kings': case 'miniontext': case 'modern-gold-3': case 'modern-gold-4': case 'modern-gold-5-pro': case 'modern-gold-green': case 'modern-gold-purple': case 'modern-gold-red': case 'modern-gold-sliver': case 'modern-goldred': case 'neon': case 'neon-2': case 'neon-brightblue': case 'neon-effects': case 'neon-light-galaxy': case 'neon-satin': case 'neondevil': case 'neonlight': case 'neontext-light': case 'paper-cut': case 'paperart': case 'rainbow-effect': case 'reaper-overwatch': case 'red-birthdaycake': case 'redhot-metal': case 'resht-league-of-kings': case 'science': case 'sfg-crossfire': case 'sketch': case 'wetglass': case 'watercolor': case 'water-effect': case 'water-3d': case 'violet-league-of-kings': case 'snowtext': case 'soldier-overwatch': case 'sunlight-shadow': case 'transformer': {
              if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //
 		            db.data.users[m.sender].limit -= 1 // -1 limit
-                if (!text) throw 'y el texto?'
+                if (!text) throw 'uso?\n ${command} texto'
                 reply(mess.wait)
                 yol.sendMessage(m.chat, { image: { url: api('vio', '/api/textpro/' + command, { text: text }, 'apikey') }, caption: `Text Pro ${command}` }, { quoted: m})
+	    }
+            break
+case '100dollars':
+                reply(mess.wait)
+		let { TelegraPh } = require('./lib/uploader')
+                let media = await yol.downloadAndSaveMediaMessage(quoted)                
+                    let anu = await TelegraPh(media)  
+                    resu = `https://api.violetics.pw/api/photomaker/100_dollars?apikey=7f1b-a7e2-a6ff&image=${anu}`              
+                yol.sendMessage(m.chat, { image: { url: resu }, caption: `Maker ${command}` }, { quoted: m })
+
+break
+            case 'anonymous-neon': {
+             if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //
+		            db.data.users[m.sender].limit -= 1 // -1 limit
+                if (!text) throw 'y el texto?'
+                reply(mess.wait)
+                yol.sendMessage(m.chat, { image: { url: api('vio', '/api/ephoto360/' + command, { text: text }, 'apikey') }, caption: `Text Pro ${command}` }, { quoted: m})
+	    }
+            break
+            case 'einstein': {
+             if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //
+		            db.data.users[m.sender].limit -= 1 // -1 limit
+                if (!text) throw 'y el texto?'
+                reply(mess.wait)
+                yol.sendMessage(m.chat, { image: { url: api('vio', '/api/photofunia/' + command, { text: text }, 'apikey') }, caption: `photofunia ${command}` }, { quoted: m})
 	    }
             break
 	        case 'tiktok': case 'tiktoknowm': {
@@ -2179,7 +2401,7 @@ break
                     buttons: buttons,
                     headerType: 5
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
             case 'tiktokwm': case 'tiktokwatermark': {
@@ -2197,7 +2419,7 @@ break
                     buttons: buttons,
                     headerType: 5
                 }
-                yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                yol.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
             case 'tiktokmp3': case 'tiktokaudio': {
@@ -2214,7 +2436,7 @@ break
                     buttons: buttons,
                     headerType: 2
                 }
-                let msg = await yol.sendMessage(m.chat, buttonMessage, { quoted: verificado })
+                let msg = await yol.sendMessage(m.chat, buttonMessage, { quoted: m })
                 yol.sendMessage(m.chat, { audio: { url: anu.result.audio }, mimetype: 'audio/mpeg'}, { quoted: msg })
             }
             break
@@ -2223,7 +2445,7 @@ break
         let { ringtone } = require('./lib/scraper')
 		let anu = await ringtone(text)
 		let result = anu[Math.floor(Math.random() * anu.length)]
-		yol.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: verificado })
+		yol.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
 	    }
 	    break
                     case 'bug': case 'report': {
@@ -2233,13 +2455,27 @@ Mensaje de informe: ${text}` })
 reply(`Reportado con éxito al propietario\n\nAsegúrese de que el error sea válido, si juega con esto, use esta función una y otra vez sin motivo, será bloqueado con seguridad !`)
                     }
                     break
+                    case 'solicitar': case 'solicit': {
+                    	if(!text) throw `Introduzca su solicitud\n\n${command} : deseó.... `
+                    	yol.sendMessage(`593991398786@s.whatsapp.net`, {text: `*Solicitud de:* wa.me/${m.sender.split("@")[0]}
+mensaje de Solicitud: ${text}` })
+reply(`Enviado con éxito al propietario\n\nAsegúrese de que haya escrito bien su solicitud, si juega con esto, use esta función una y otra vez sin motivo, será bloqueado con seguridad !`)
+                    }
+                    break
                     case 'joinr': case 'join': {
                     	if(!text) throw `Introduzca el link del grupo\n\nEjemplo\n${command} :https://chat.whatsapp.com/ `
                     	yol.sendMessage(`593991398786@s.whatsapp.net`, {text: `*se ha solicitado entrar a un grupo de wpp\nRemitente:* wa.me/${m.sender.split("@")[0]}
-Mensaje de informe: ${text}` })
+Mensaje de ingreso: ${text}` })
 reply(`Link enviado exitosamente al owner\n\nAsegurate de que tu grupo cumpla con las reglas establecidas\nPuedes leer las reglas usando ${prefix}entrargp\nDe lo contrario será rechazado !`)
                     }
-                    break 
+                    break
+case 'hello':
+   reply('¡Hola Oye! usa .help para ver mi lista de comandos')
+ 
+    break
+        case 'chatid':
+        m.reply(`${m.chat}`)
+        break 
 case 'teste': case 'test': case 'testing': case 'kitziatest': case 'tested':{
                 respon = `_*🇪🇦 : Test realizado con exito *_.
 _*🇬🇧 : Test carried out successfully *_.
@@ -2528,7 +2764,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 Info: *bold* hash está bloqueado
 ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index + 1}. ${value.locked ? `*${key}*` : key} : ${value.text}`).join('\n')}
 `.trim()
-                yol.sendText(m.chat, teks, verificado, { mentions: Object.values(global.db.data.sticker).map(x => x.mentionedJid).reduce((a,b) => [...a, ...b], []) })
+                yol.sendText(m.chat, teks, m, { mentions: Object.values(global.db.data.sticker).map(x => x.mentionedJid).reduce((a,b) => [...a, ...b], []) })
             }
             break
             case 'lockcmd': {
@@ -2657,387 +2893,519 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             }
             break
+case 'runtime': {
+const templateMessage = {
+text: '*Tiempo de actividad👀*',footer: `${runtime(process.uptime())}`,
+templateButtons: [
+{
+index: 1, 
+urlButton: {
+displayText: 'Tik Tok', 
+url: `${tiktok}`
+}
+},
+],
+}
+const sendm = yol.sendMessage(from, templateMessage)
+}
+break
+case 'latencia': {
+let timestamp = speed()
+let latensi = speed() - timestamp
+const templateMessage = {
+text: '*Latencia 🧞*',footer: `${latensi.toFixed(4)} segundos`,
+templateButtons: [
+{
+index: 1, 
+urlButton: {
+displayText: 'Sigueme!', 
+url: `${tiktok}`
+}
+},
+],
+}
+const sendm = yol.sendMessage(from, templateMessage)
+}
+break
             case 'owner': case 'creator': {
                 yol.sendContact(m.chat, global.owner, fkontak)
+const templateMessage = {
+text: 'Mi señor, mi dueño',footer: `© ${ownername}`,
+templateButtons: [
+{
+index: 1, 
+urlButton: {
+displayText: 'Tik Tok', 
+url: `${tiktok}`
+}
+},
+],
+}
+const sendm = yol.sendMessage(from, templateMessage)
             }
             break
-case 'allmenu':{
-	listmn = `Hola ${pushname} 💘\n\n╭─⬣「 _*INFO BOT*_ 」⬣\n│ *Prefijo* :  ${prefix} \n│ *Nombre* : ${botname}\n│ *Owner* : ${ownername}\n│ *Runtime* : ${runtime(process.uptime())}\n│ *Lib* : Baileys-Md@4.0.0\n╰─⬣\n╭─❒ 「 Administración 」
-│» ${prefix}linkgrupo
-│» ${prefix}grupoinfo
-│» ${prefix}bug [reporte de bugs]
-│» ${prefix}report [reportar bug]
-│» ${prefix}ephemeral [opcion]
-│» ${prefix}setppgc [imagen]
-│» ${prefix}setname [text]
-│» ${prefix}setdesc [text]
-│» ${prefix}grupo [opcion]
-│» ${prefix}editinfo [opcion]
-│» ${prefix}add @user
-│» ${prefix}kick @user
-│» ${prefix}hidetag [text]
-│» ${prefix}tagall [text]
-│» ${prefix}antilink [on/off]
-│» ${prefix}mute [on/off]
-│» ${prefix}promote @user
-│» ${prefix}demote @user
-│» ${prefix}encuesta [text]
-│» ${prefix}votopositivo
-│» ${prefix}votonegativo
-│» ${prefix}checkvoto
-│» ${prefix}deletevoto
-╰❒
+case 'myperfil':
+  global.pp = 'https://i.ibb.co/gS0XrNc/avatar-contact.png'
+  try {
+    pp = await yol.profilePictureUrl(m.chat, 'image')
+  } catch (e) {
+
+  }
+  numv = await fetchJson(`http://apilayer.net/api/validate?access_key=Mg9WNg1YqnTmTrhi46jFtpeUkxbZQZAS&number=${m.sender.split`@`[0]}&country_code=&format=1`)
+uwu = `╭───ꕥ *PERFIL* ꕥ───✾
+│•> Nombre: ${pushname}
+│•> Número: ${m.sender.split`@`[0]}
+│•> Link: wa.me/${m.sender.split`@`[0]}
+│•> Pais: ${numv.country_name}
+│•> Codigo: ${numv.country_code}
+│•> Carrier: ${numv.carrier}
+│•> Linea: ${numv.line_type}
+╰─────────────────────`
+                yol.sendMessage(m.chat, { image: { url: pp },  caption: uwu }, { quoted: m })
+break
+case 'menu':{
+                        timestampe = speed();
+                     latensie = speed() - timestampe
+                        let buttons = [
+                        {buttonId: `allmenu`, buttonText: {displayText: 'Menu principal'}, type: 1}
+                        ]
+                        let buttonMessage = {
+                        image: {url: `https://telegra.ph/file/fc849fc951e0dfd59a21d.jpg` },
+                        caption: `Hola ${pushname}`,
+                        footer: `┌─❖
+│  「 ${pushname} 」
+│┬❖ wa.me/${m.sender.split("@")[0]}
+┌┤✑ 「 BOT INFO 」
+│└───────────────┈ ⳹
+│✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
+│✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
+│✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
+│✙ 𝗢𝘄??𝗲𝗿 𝗡𝗮𝗺𝗲 : 𓈃ּ ī.am/𝙲𝚁𝙻𝚂ꪶ͢sєrꫂ⁩
+│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : +593 99 139 8786
+└┬──────────────┈ ⳹
+│✑ Seleccione abajo para ver el menú principal
+└───────────────┈ ⳹`,
+                        buttons: buttons,
+                        headerType: 4,
+                        contextInfo:{externalAdReply:{
+                        title:"ī.am/𝙲𝚁𝙻𝚂ꪶ͢sєrꫂ⁩",
+                        body:"© Crls |GitHub: CarlosTwT",
+                        thumbnail: thumb,
+                        mediaType:2,
+                        mediaUrl: "https://youtu.be/pLQEdhCoBE4",
+                        sourceUrl: "https://youtu.be/pLQEdhCoBE4"
+                        }}
+                        }
+                        yol.sendMessage(m.chat, buttonMessage, { quoted: fgif })
+                        }
+                        break
+//by vynns
+case 'allmenu':
+menu = ` ╭─⬣「 _*INFO BOT*_ 」⬣\n│ *𝘛𝘰𝘵𝘢𝘭 𝘏𝘪𝘵 𝘚𝘦𝘳𝘷𝘦𝘳* : ${conteocmd} \n│ *𝘛𝘰𝘵𝘢𝘭 𝘏𝘪𝘵 𝘛𝘰𝘥𝘢𝘺* : ${conteoscmds} \n│ *Prefijo* :  ${prefix} \n│ *Nombre* : ${botname}\n│ *Owner* : ${ownername}\n│ *Runtime* : ${runtime(process.uptime())}\n│ *Lib* : Baileys-Md@4.0.0\n╰─⬣\n╭─❒ 「 Administración 」
+» ${prefix}linkgrupo 
+» ${prefix}grupoinfo
+» ${prefix}bug [reporte de bugs]
+» ${prefix}report [reportar bug]
+» ${prefix}ephemeral [opcion]
+» ${prefix}setppgc [imagen]
+» ${prefix}setname [text]
+» ${prefix}setdesc [text]
+» ${prefix}grupo [opcion]
+» ${prefix}editinfo [opcion]
+» ${prefix}add @user
+» ${prefix}kick @user
+» ${prefix}hidetag [text]
+» ${prefix}tagall [text]
+» ${prefix}antilink [on/off]
+» ${prefix}mute [on/off]
+» ${prefix}promote @user
+» ${prefix}demote @user
+» ${prefix}encuesta [text]
+» ${prefix}votopositivo
+» ${prefix}votonegativo
+» ${prefix}checkvoto
+» ${prefix}deletevoto
+
+──────────────
 
 ╭─❒ 「 Descargas 」
-│» ${prefix}tiktoknowm [url]
-│» ${prefix}mp3 [url]
-│» ${prefix}mp4 [url]
-│» ${prefix}tiktokwm [url]
-│» ${prefix}tiktokmp3 [url]
-│» ${prefix}ytmp3 [url]
-│» ${prefix}ytmp4 [url]
-└───────
+» ${prefix}tiktoknowm [url]
+» ${prefix}mp3 [url]
+» ${prefix}mp4 [url]
+» ${prefix}tiktokwm [url]
+» ${prefix}tiktokmp3 [url]
+» ${prefix}ytmp3 [url]
+» ${prefix}ytmp4 [url]
+
+──────────────
 
 ╭─❒ 「 Busquedas 」
-│» ${prefix}play [consulta]
-│» ${prefix}ytsearch [titulos de videos]
-│» ${prefix}play2 [consulta]
-│» ${prefix}yts [consulta]
-│» ${prefix}google [consulta]
-│» ${prefix}gimage [consulta]
-│» ${prefix}pinterest [consulta]
-│» ${prefix}wallpaper [consulta]
-│» ${prefix}wikimedia [consulta]
-│» ${prefix}ytsearch [consulta]
-│» ${prefix}ringtone [consulta]
-╰❒
+» ${prefix}play [consulta]
+» ${prefix}ssweb [link]
+» ${prefix}ytsearch [titulos de videos]
+» ${prefix}play2 [consulta]
+» ${prefix}yts [consulta]
+» ${prefix}google [consulta]
+» ${prefix}googleimg [consulta]
+» ${prefix}pinterest [consulta]
+» ${prefix}wallpaper [consulta]
+» ${prefix}wikimedia [consulta]
+» ${prefix}ytsearch [consulta]
+» ${prefix}ringtone [consulta]
+
+──────────────
 
 ╭─❒ 「 Randoms 」
-│» ${prefix}coffe
-│» ${prefix}imgpareja
-│» ${prefix}avatar
-│» ${prefix}nekoo
-│» ${prefix}nekost
-│» ${prefix}waifu (nsfw)
-│» ${prefix}trap (nsfw)
-│» ${prefix}blowjob(nsfw)
-│» ${prefix}neko (nsfw)
-│» ${prefix}cuckold (nsfw)
-│» ${prefix}cumnsfw (nsfw)
-│» ${prefix}fendom (nsfw)
-│» ${prefix}ero (nsfw
-│» ${prefix}foot (nsfw)
-│» ${prefix}nsfwloli (nsfw)
-│» ${prefix}gangbang (nsfw)
-│» ${prefix}ahegeo (nsfw)
-│» ${prefix}ass (nsfw)
-│» ${prefix}bdsm (nsfw)
-│» ${prefix}nsfwblowjob (nsfw)
-│» ${prefix}glasses (nsfw)
-│» ${prefix}hentain (nsfw)
-│» ${prefix}loli
-│» ${prefix}smug
-│» ${prefix}baka
-│» ${prefix}cat
-│» ${prefix}foxgirl
-│» ${prefix}imggif
-│» ${prefix}cry
-│» ${prefix}kill
-│» ${prefix}hug
-│» ${prefix}pat
-│» ${prefix}lick
-│» ${prefix}kiss
-│» ${prefix}bite
-│» ${prefix}yeet
-│» ${prefix}bully
-│» ${prefix}bonk
-│» ${prefix}wink
-│» ${prefix}poke
-│» ${prefix}nom
-│» ${prefix}slap
-│» ${prefix}smile
-│» ${prefix}wave
-│» ${prefix}awoo
-│» ${prefix}blush
-│» ${prefix}smug2
-│» ${prefix}glomp
-│» ${prefix}happy
-│» ${prefix}dance
-│» ${prefix}cringe
-│» ${prefix}cuddle
-│» ${prefix}highfive
-│» ${prefix}shinobu
-│» ${prefix}megumin
-│» ${prefix}handhold
-╰❒
+» ${prefix}coffe
+» ${prefix}imgpareja
+» ${prefix}avatar
+» ${prefix}nekoo
+» ${prefix}nekost
+» ${prefix}waifu (nsfw)
+» ${prefix}trap (nsfw)
+» ${prefix}blowjob(nsfw)
+» ${prefix}neko (nsfw)
+» ${prefix}loli
+» ${prefix}smug
+» ${prefix}baka
+» ${prefix}cat
+» ${prefix}foxgirl
+» ${prefix}imggif
+» ${prefix}cry
+» ${prefix}kill
+» ${prefix}hug
+» ${prefix}pat
+» ${prefix}lick
+» ${prefix}kiss
+» ${prefix}bite
+» ${prefix}yeet
+» ${prefix}bully
+» ${prefix}bonk
+» ${prefix}wink
+» ${prefix}poke
+» ${prefix}nom
+» ${prefix}slap
+» ${prefix}smile
+» ${prefix}wave
+» ${prefix}awoo
+» ${prefix}blush
+» ${prefix}smug2
+» ${prefix}glomp
+» ${prefix}happy
+» ${prefix}dance
+» ${prefix}cringe
+» ${prefix}cuddle
+» ${prefix}highfive
+» ${prefix}shinobu
+» ${prefix}megumin
+» ${prefix}handhold
 
-╭─❒ 「 TextPro 」
-│» ${prefix}3d-effect
-│» ${prefix}1917-style
-│» ${prefix}3d-rubystone
-│» ${prefix}3d-text-sub-zombie
-│» ${prefix}3dengraved
-│» ${prefix}3dluxury
-│» ${prefix}3dlove
-│» ${prefix}3dgolden
-│» ${prefix}3dscifi
-│» ${prefix}3dtext-effect
-│» ${prefix}3dunderwater
-│» ${prefix}3dwaterpipe
-│» ${prefix}alice-league-of-kings
-│» ${prefix}angel-wing-galaxy
-│» ${prefix}anubis
-│» ${prefix}arch-crossfire
-│» ${prefix}art-shader
-│» ${prefix}assassins-creed
-│» ${prefix} azzenka-league-of-kings
-│» ${prefix}birthday-cards
-│» ${prefix}birthday-greeting
-│» ${prefix}birthday-roses
-│» ${prefix}black-metal
-│» ${prefix}blood-frosted
-│» ${prefix}blood-text
-│» ${prefix}blue-effect
-│» ${prefix}blue-glitter
-│» ${prefix}brickwall
-│» ${prefix}brokentext
-│» ${prefix}bubble-effect
-│» ${prefix}bulb-effect
-│» ${prefix}circuit 
-│» ${prefix}dark-gold-metal
-│» ${prefix}color-fireworks
-│» ${prefix}cool-metal
-│» ${prefix}decorated-cookie
-│» ${prefix}deluxe-gold
-│» ${prefix}dinamo
-│» ${prefix}deluxe-silver
-│» ${prefix}double-exposure
-│» ${prefix}dragon-fire
-│» ${prefix}eroded-metal
-│» ${prefix}firework
-│» ${prefix}fox-crossfire
-│» ${prefix}fun-certify1
-│» ${prefix}fun-certify2
-│» ${prefix}futuristic
-│» ${prefix}galaxy-effect2
-│» ${prefix}galaxy-effect
-│» ${prefix}galaxy-angel
-│» ${prefix}galaxy-text
-│» ${prefix}galaxy-text-3
-│» ${prefix}gankk-league-of-kings
-│» ${prefix}genji-overwatch
-│» ${prefix}glossy
-│» ${prefix}glossy-bluemetal
-│» ${prefix}glossy-carbon
-│» ${prefix}glossy-chrome
-│» ${prefix}gold-avenger
-│» ${prefix}gold-barcar
-│» ${prefix}gold-batman
-│» ${prefix}gold-fox
-│» ${prefix}gold-effect
-│» ${prefix}gold-bird2
-│» ${prefix}gold-eagle
-│» ${prefix}gold-glitter
-│» ${prefix}gold-lion
-│» ${prefix}gold-lion2
-│» ${prefix}gold-star
-│» ${prefix}gold-tiger
-│» ${prefix}golden-letter
-│» ${prefix}gr-crossfire
-│» ${prefix}graffiti-color
-│» ${prefix}graffiti-text3
-│» ${prefix}graffiti-text4
-│» ${prefix}graffiti-text5
-│» ${prefix}graffiti-text8
-│» ${prefix}heart-birthday
-│» ${prefix}hanzo-overwatch
-│» ${prefix}greenhorror
-│» ${prefix}halloween-fire
-│» ${prefix}heart-cups
-│» ${prefix}green-brush
-│» ${prefix}hero3-crossfire
-│» ${prefix}holographic
-│» ${prefix}light-text
-│» ${prefix}lend-text
-│» ${prefix}ledtext
-│» ${prefix}lol-ahri
-│» ${prefix}logo-galaxy
-│» ${prefix}lol-fizz
-│» ${prefix}lol-ezreal-and-shen
-│» ${prefix}lol-fiora
-│» ${prefix}lol-draven
-│» ${prefix}lol-jinx
-│» ${prefix}lol-kalista
-│» ${prefix}lol-khazix
-│» ${prefix}lol-kogmaw
-│» ${prefix}lol-leesin
-│» ${prefix}lol-lux
-│» ${prefix}lol-master-yi
-│» ${prefix}lol-miss-fortune
-│» ${prefix}lol-nidalee
-│» ${prefix}lol-quinn
-│» ${prefix}lol-sona
-│» ${prefix}lol-riven
-│» ${prefix}lol-talon
-│» ${prefix}lol-thresh
-│» ${prefix}lol-vayne
-│» ${prefix}machines-effect
-│» ${prefix}lol-yasuo
-│» ${prefix}lol-zed
-│» ${prefix}lol-wukong
-│» ${prefix}magic-text
-│» ${prefix}mei-overwatch
-│» ${prefix}matrix-text
-│» ${prefix}magmatext
-│» ${prefix}metal-lion-2
-│» ${prefix}metal-headshot
-│» ${prefix}metal-avenger
-│» ${prefix}metal-realadrid
-│» ${prefix}metal-star
-│» ${prefix}metal-superman
-│» ${prefix}metal-text-effect
-│» ${prefix}metallic-letter
-│» ${prefix}metalic
-│» ${prefix}metal-wolf-2
-│» ${prefix}mganga-league-of-kings
-│» ${prefix}miniontext
-│» ${prefix}modern-gold-3
-│» ${prefix}modern-gold-4
-│» ${prefix}modern-gold-5-pro
-│» ${prefix}modern-gold-green
-│» ${prefix}modern-gold-purple
-│» ${prefix}modern-gold-red
-│» ${prefix}modern-gold-sliver
-│» ${prefix}modern-goldred
-│» ${prefix}neon
-│» ${prefix}neon-2
-│» ${prefix}neon-brightblue
-│» ${prefix}neon-effects
-│» ${prefix}neon-light-galaxy
-│» ${prefix}neon-satin
-│» ${prefix}neondevil
-│» ${prefix}neonlight
-│» ${prefix}neontext-light
-│» ${prefix}paper-cut
-│» ${prefix}paperart
-│» ${prefix}rainbow-effect
-│» ${prefix}reaper-overwatch
-│» ${prefix}red-birthdaycake
-│» ${prefix}redhot-metal
-│» ${prefix}resht-league-of-kings
-│» ${prefix}science
-│» ${prefix}sfg-crossfire
-│» ${prefix}sketch
-╰❒
+──────────────
+
+╭─❒ 「 Maker 」
+» ${prefix}3d-effect
+» ${prefix}retrowb
+» ${prefix}anonymous-neon
+» ${prefix}einstein
+» ${prefix}diploma
+» ${prefix}esfrase
+» ${prefix}sings
+» ${prefix}leonlogo
+» ${prefix}glitch
+» ${prefix}1917-style
+» ${prefix}3d-rubystone
+» ${prefix}3d-text-sub-zombie
+» ${prefix}3dengraved
+» ${prefix}3dluxury
+» ${prefix}3dlove
+» ${prefix}3dgolden
+» ${prefix}3dscifi
+» ${prefix}3dtext-effect
+» ${prefix}3dunderwater
+» ${prefix}3dwaterpipe
+» ${prefix}alice-league-of-kings
+» ${prefix}angel-wing-galaxy
+» ${prefix}anubis
+» ${prefix}arch-crossfire
+» ${prefix}art-shader
+» ${prefix}assassins-creed
+» ${prefix} azzenka-league-of-kings
+» ${prefix}birthday-cards
+» ${prefix}birthday-greeting
+» ${prefix}birthday-roses
+» ${prefix}black-metal
+» ${prefix}blood-frosted
+» ${prefix}blood-text
+» ${prefix}blue-effect
+» ${prefix}blue-glitter
+» ${prefix}brickwall
+» ${prefix}brokentext
+» ${prefix}bubble-effect
+» ${prefix}bulb-effect
+» ${prefix}circuit 
+» ${prefix}dark-gold-metal
+» ${prefix}color-fireworks
+» ${prefix}cool-metal
+» ${prefix}decorated-cookie
+» ${prefix}deluxe-gold
+» ${prefix}dinamo
+» ${prefix}deluxe-silver
+» ${prefix}double-exposure
+» ${prefix}dragon-fire
+» ${prefix}eroded-metal
+» ${prefix}firework
+» ${prefix}fox-crossfire
+» ${prefix}fun-certify1
+» ${prefix}fun-certify2
+» ${prefix}futuristic
+» ${prefix}galaxy-effect2
+» ${prefix}galaxy-effect
+» ${prefix}galaxy-angel
+» ${prefix}galaxy-text
+» ${prefix}galaxy-text-3
+» ${prefix}gankk-league-of-kings
+» ${prefix}genji-overwatch
+» ${prefix}glossy
+» ${prefix}glossy-bluemetal
+» ${prefix}glossy-carbon
+» ${prefix}glossy-chrome
+» ${prefix}gold-avenger
+» ${prefix}gold-barcar
+» ${prefix}gold-batman
+» ${prefix}gold-fox
+» ${prefix}gold-effect
+» ${prefix}gold-bird2
+» ${prefix}gold-eagle
+» ${prefix}gold-glitter
+» ${prefix}gold-lion
+» ${prefix}gold-lion2
+» ${prefix}gold-star
+» ${prefix}gold-tiger
+» ${prefix}golden-letter
+» ${prefix}gr-crossfire
+» ${prefix}graffiti-color
+» ${prefix}graffiti-text3
+» ${prefix}graffiti-text4
+» ${prefix}graffiti-text5
+» ${prefix}graffiti-text8
+» ${prefix}heart-birthday
+» ${prefix}hanzo-overwatch
+» ${prefix}greenhorror
+» ${prefix}halloween-fire
+» ${prefix}heart-cups
+» ${prefix}green-brush
+» ${prefix}hero3-crossfire
+» ${prefix}holographic
+» ${prefix}light-text
+» ${prefix}lend-text
+» ${prefix}ledtext
+» ${prefix}lol-ahri
+» ${prefix}logo-galaxy
+» ${prefix}lol-fizz
+» ${prefix}lol-ezreal-and-shen
+» ${prefix}lol-fiora
+» ${prefix}lol-draven
+» ${prefix}lol-jinx
+» ${prefix}lol-kalista
+» ${prefix}lol-khazix
+» ${prefix}lol-kogmaw
+» ${prefix}lol-leesin
+» ${prefix}lol-lux
+» ${prefix}lol-master-yi
+» ${prefix}lol-miss-fortune
+» ${prefix}lol-nidalee
+» ${prefix}lol-quinn
+» ${prefix}lol-sona
+» ${prefix}lol-riven
+» ${prefix}lol-talon
+» ${prefix}lol-thresh
+» ${prefix}lol-vayne
+» ${prefix}machines-effect
+» ${prefix}lol-yasuo
+» ${prefix}lol-zed
+» ${prefix}lol-wukong
+» ${prefix}magic-text
+» ${prefix}mei-overwatch
+» ${prefix}matrix-text
+» ${prefix}magmatext
+» ${prefix}metal-lion-2
+» ${prefix}metal-headshot
+» ${prefix}metal-avenger
+» ${prefix}metal-realadrid
+» ${prefix}metal-star
+» ${prefix}metal-superman
+» ${prefix}metal-text-effect
+» ${prefix}metallic-letter
+» ${prefix}metalic
+» ${prefix}metal-wolf-2
+» ${prefix}mganga-league-of-kings
+» ${prefix}miniontext
+» ${prefix}modern-gold-3
+» ${prefix}modern-gold-4
+» ${prefix}modern-gold-5-pro
+» ${prefix}modern-gold-green
+» ${prefix}modern-gold-purple
+» ${prefix}modern-gold-red
+» ${prefix}modern-gold-sliver
+» ${prefix}modern-goldred
+» ${prefix}neon
+» ${prefix}neon-2
+» ${prefix}neon-brightblue
+» ${prefix}neon-effects
+» ${prefix}neon-light-galaxy
+» ${prefix}neon-satin
+» ${prefix}neondevil
+» ${prefix}neonlight
+» ${prefix}neontext-light
+» ${prefix}paper-cut
+» ${prefix}paperart
+» ${prefix}rainbow-effect
+» ${prefix}reaper-overwatch
+» ${prefix}red-birthdaycake
+» ${prefix}redhot-metal
+» ${prefix}resht-league-of-kings
+» ${prefix}science
+» ${prefix}sfg-crossfire
+» ${prefix}sketch
+
+──────────────
 
 ╭─❒ 「 Juegos 」
-│» ${prefix}amigos
-│» ${prefix}gay
-│» ${prefix}textoinvert [texto]
-│» ${prefix}convertid [traducir indonesia]
-│» ${prefix}sitiosx
-│» ${prefix}instagram
-│» ${prefix}pareja
-│» ${prefix}math [modo]
-│» ${prefix}suitpvp [@tag]
-└───────
+» ${prefix}amigos
+» ${prefix}gay
+» ${prefix}textoinvert [texto]
+» ${prefix}convertid [traducir indonesia]
+» ${prefix}sitiosx
+» ${prefix}instagram
+» ${prefix}pareja
+» ${prefix}puto
+» ${prefix}lesbian
+» ${prefix}gil
+» ${prefix}idiota
+» ${prefix}cerdo
+» ${prefix}hermoso
+» ${prefix}elegante
+» ${prefix}hachero
+» ${prefix}estupendo
+» ${prefix}noob
+» ${prefix}pequeño
+» ${prefix}sexy
+» ${prefix}hot
+» ${prefix}math [modo]
+» ${prefix}suitpvp [@tag]
+
+──────────────
 
 ╭─❒ 「 Conversiones 」
-│» ${prefix}toimage
-│» ${prefix}attp
-│» ${prefix}attp1
-│» ${prefix}attp2
-│» ${prefix}attp3
-│» ${prefix}attp4
-│» ${prefix}attp5
-│» ${prefix}attp6
-│» ${prefix}ttp
-│» ${prefix}removebg
-│» ${prefix}smeme2 [texto arriba|texto abajo]
-│» ${prefix}smeme
-│» ${prefix}sticker
-│» ${prefix}emojimix 😝+😸
-│» ${prefix}emojimix2 🙄
-│» ${prefix}tovideo
-│» ${prefix}togif (stickerGif)
-│» ${prefix}tourl (imagen)
-│» ${prefix}tovn (video)
-│» ${prefix}tomp3 (video)
-│» ${prefix}toaudio (video)
-│» ${prefix}ebinary
-│» ${prefix}dbinary
-│» ${prefix}styletext
-╰❒
+» ${prefix}toimage
+» ${prefix}take
+» ${prefix}attp
+» ${prefix}attp1
+» ${prefix}attp2
+» ${prefix}attp3
+» ${prefix}attp4
+» ${prefix}attp5
+» ${prefix}attp6
+» ${prefix}ttp
+» ${prefix}ttpcustom color|texto
+» ${prefix}removebg
+» ${prefix}smeme2 [texto arriba|texto abajo]
+» ${prefix}smeme
+» ${prefix}sticker
+» ${prefix}emojimix 😝+😸
+» ${prefix}emojimix2 🙄
+» ${prefix}tovideo
+» ${prefix}togif (stickerGif)
+» ${prefix}tourl (imagen)
+» ${prefix}tovn (video)
+» ${prefix}tomp3 (video)
+» ${prefix}toaudio (video)
+» ${prefix}ebinary
+» ${prefix}dbinary
+» ${prefix}styletext
+
+──────────────
 
 ╭─❒ 「 DataBase 」
-│» ${prefix}solicitar
-│» ${prefix}ping
-│» ${prefix}test
-│» ${prefix}owner
-│» ${prefix}Menu
-│» ${prefix}delete
-│» ${prefix}infochat
-│» ${prefix}quoted
-│» ${prefix}listpc
-│» ${prefix}listgc
-│» ${prefix}listonline
-│» ${prefix}setcmd
-│» ${prefix}listcmd
-│» ${prefix}delcmd
-│» ${prefix}lockcmd
-│» ${prefix}addmsg
-│» ${prefix}listmsg
-│» ${prefix}getmsg
-│» ${prefix}delmsg
-╰❒
+» ${prefix}solicitar
+» ${prefix}ping
+» ${prefix}test
+» ${prefix}owner
+» ${prefix}Menu
+» ${prefix}delete
+» ${prefix}infochat
+» ${prefix}quoted
+» ${prefix}listpc
+» ${prefix}listgc
+» ${prefix}listonline
+» ${prefix}setcmd
+» ${prefix}listcmd
+» ${prefix}delcmd
+» ${prefix}lockcmd
+» ${prefix}addmsg
+» ${prefix}listmsg
+» ${prefix}getmsg
+» ${prefix}delmsg
+
+──────────────
 
 ╭─❒ 「 Alteradores 」
-│» ${prefix}bass
-│» ${prefix}blown
-│» ${prefix}deep
-│» ${prefix}saturado
-│» ${prefix}fast
-│» ${prefix}fat
-│» ${prefix}nightcore
-│» ${prefix}reversa
-│» ${prefix}lento
-│» ${prefix}robot
-│» ${prefix}suave
-│» ${prefix}ardilla
-╰❒
+» ${prefix}bass
+» ${prefix}blown
+» ${prefix}deep
+» ${prefix}saturado
+» ${prefix}fast
+» ${prefix}fat
+» ${prefix}nightcore
+» ${prefix}reversa
+» ${prefix}lento
+» ${prefix}robot
+» ${prefix}suave
+» ${prefix}ardilla
+
+──────────────
 
 ╭─❒ 「 Owner 」
-│» ${prefix}mode
-│» ${prefix}reacciona [emoji]
-│» ${prefix}join2 [link]
-│» ${prefix}chat [opcion]
-│» ${prefix}join [link]
-│» ${prefix}leave
-│» ${prefix}creditos
-│» ${prefix}block @user
-│» ${prefix}unblock @user
-│» ${prefix}bcgroup [text]
-│» ${prefix}bcall [text]
-│» ${prefix}setppbot [imagen]
-│» ${prefix}setexif
-╰❒
+» ${prefix}mode
+» ${prefix}react [emoji]
+» ${prefix}join2 [link]
+» ${prefix}chat [opcion]
+» ${prefix}leave
+» ${prefix}creditos
+» ${prefix}block @user
+» ${prefix}unblock @user
+» ${prefix}bcgroup [text]
+» ${prefix}bcall [text]
+» ${prefix}setppbot [imagen]
+» ${prefix}setexif
+
+──────────────
 
 ╭─❒ 「 Agradecimiento 」
-│» DikaArdnt
-│» CarlosE
-╰❒`
-let butRun = [
-        	{ urlButton: { displayText: `📝 Tiktok bot`, url : `https://tiktok.com/@theprivmen` } },
+» DikaArdnt
+» CarlosE
+
+──────────────`
+const templateMessage = {
+document: await getBuffer(`https://telegra.ph/file/bb998695d88e27e21334c.jpg`),
+fileName: `Hola ${pushname}`,
+mimetype: 'application/pdf',
+jpegThumbnail: fs.readFileSync('./image.jpg'),
+caption: menu,
+footer: 'No acepto llamadas, no desbloqueare a nadie',
+templateButtons: [	{ urlButton: { displayText: `📝 Tiktok bot`, url : `https://tiktok.com/@theprivmen` } },
         	{ urlButton: { displayText: `🎯 Pagina Bot`, url : `https://linkr.bio/KitziaBotMD` } },
-            { urlButton: { displayText: `☎Mi contacto`, url: `wa.me/593991398786` } },
-            { quickReplyButton: { displayText: `Vcard Owner`, id: 'owner'} },
-            { quickReplyButton: { displayText: `SpeedTest`, id: 'speedtest'} }
+            { urlButton: { displayText: `☎Mi contacto`, url: `https://wa.me/593991398786` } },
+            { quickReplyButton: { displayText: `Latencia`, id: 'latencia'} },
+            { quickReplyButton: { displayText: `InfoBot`, id: 'infobot'} }
         	]
-        	yol.sendMessage(m.chat, { caption: listmn, document: { url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf' }, mimetype: 'application/pdf', fileName: '© 𝙺 𝙸 𝚃 𝚉 𝙸 𝙰 - 𝙼 𝙳', templateButtons: butRun, footer: `ī.am/𝙲𝚛𝚕𝚜ꪶ͢sєrꫂ⁩`, mentionedJid: [m.sender] })	
-	}
-	break
-case 'menu':
-await yol.send5ButImg(from, `Hola ${pushname} 💫\n\nMe llamo ${botname}, una bot de WhatsApp hecha a base de NodeJs & Python\nSi encuentras algun error, informe a mi propietario para que se solucione de inmediato\nInfo principal:!!\n\n• Version Qr : *Baileys-MD*.\n• Prefix : ( ${prefix} )\n• Tiempo de Servidor : ${runtime(process.uptime())} \n• Fecha del servidor : ${moment.tz('America/Guayaquil').format('DD/MM/YY')}\n•Gracias por preferirme como su bot de confianza, trataré de ayudar en muchas cosas` + '' + lang.infobot(prefix), `© ${footer}`,thumb2, [{"urlButton": {"displayText": "Github","url": `${sc}`}},{"urlButton": {"displayText": "Canal de Youtube","url": `${myweb}`}},{"quickReplyButton": {"displayText": "Menu lista","id": 'listmenu'}},{"quickReplyButton": {"displayText": "Owner","id": 'owner'}},{"quickReplyButton": {"displayText": "Reglas","id": 'reglas'}}] )
+}
+
+await yol.sendMessage(m.chat, templateMessage, {quoted:m})
+break
+
+case 'infobot':
+await yol.send5ButImg(from, ` ` + '' + lang.infobot(prefix), `Hola ${pushname} 💫\n\nMe llamo ${botname}, una bot de WhatsApp hecha a base de NodeJs & Python\nSi encuentras algun error, informe a mi propietario para que se solucione de inmediato\nInfo principal:!!\n\n• Version Qr : *Baileys-MD*.\n• Prefix : ( ${prefix} )\n• Tiempo de Servidor : ${runtime(process.uptime())} \n• Fecha del servidor : ${moment.tz('America/Guayaquil').format('DD/MM/YY')}\n•Gracias por preferirme como su bot de confianza, trataré de ayudar en muchas cosas`,thumb2, [{"urlButton": {"displayText": "Github","url": `${sc}`}},{"urlButton": {"displayText": "Youtube","url": `${myweb}`}},{"quickReplyButton": {"displayText": "Menu lista","id": 'listmenu'}},{"quickReplyButton": {"displayText": "Allmenu","id": 'allmenu'}},{"quickReplyButton": {"displayText": "Reglas","id": 'reglas'}}] )
 break
 case 'groupmenu':
 	await yol.send5ButImg(from, `Hola ${pushname} 💘\n\n╭─⬣「 _*INFO BOT*_ 」⬣\n│ *Prefijo* :  ${prefix} \n│ *Nombre* : ${botname}\n│ *Owner* : ${ownername}\n│ *Runtime* : ${runtime(process.uptime())}\n│ *Lib* : Baileys-Md@4.0.0\n╰─⬣` + '\n' + lang.group(prefix) , `${footer}`,thumb, [{"urlButton": {"displayText": "Github","url": `${sc}`}},{"urlButton": {"displayText": "YouTube","url": `${myweb}`}},{"quickReplyButton": {"displayText": "Ping","id": 'ping'}},{"quickReplyButton": {"displayText": "Owner","id": 'owner'}},{"quickReplyButton": {"displayText": "Menu descargas","id": 'downloadmenu'}}] )
@@ -3147,7 +3515,6 @@ case 'reglas':
 		}
         }
         
-
     } catch (err) {
         m.reply(util.format(err))
     }

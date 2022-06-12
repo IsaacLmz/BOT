@@ -130,9 +130,9 @@ async function startyol() {
                 }
 
                 if (anu.action == 'add') {
-                    yol.sendImageAsSticker(anu.id, fs.readFileSync('./holaxd.webp'), '', { packname: "Sticker", author: "MrCarlos-Ops", categories: "ðŸ˜‚" })
+                    yol.sendImageAsSticker(anu.id, fs.readFileSync('./holaxd.webp'), '', { packname: "Bienvenido", author: "a este grupo", categories: "ðŸ˜‚" })
                 } else if (anu.action == 'remove') {
-                    yol.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `@${num.split("@")[0]} ha salido De ${metadata.subject}` })
+                    yol.sendImageAsSticker(anu.id, fs.readFileSync('./ubye.webp'), '', { packname: "q gei", author: "se Salió", categories: "ðŸ˜‚" })
                 }
             }
         } catch (err) {
@@ -179,7 +179,7 @@ async function startyol() {
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await yol.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await yol.getName(i + '@s.whatsapp.net')}\nFN:${await yol.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Móvil\nitem2.EMAIL;type=INTERNET:${email}\nitem2.X-ABLabel:Email\nitem3.URL:${ig}\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;${region};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await yol.getName(i + '@s.whatsapp.net')}\nFN:${await yol.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Escríbeme\nitem2.EMAIL;type=INTERNET:${email}\nitem2.X-ABLabel:Email\nitem3.URL:${ig}\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;${region};;;;\nitem4.X-ABLabel:Region\nitem5.OTRO;type=Crls:${gracias}\nitem5.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	yol.sendMessage(jid, { contacts: { displayName: `${list.length} Kontak`, contacts: list }, ...opts }, { quoted })
@@ -224,7 +224,7 @@ async function startyol() {
 
     yol.ev.on('creds.update', saveState)
 
-    // Add Other
+    // Add Other xd
     /** Send Button 5 Gif
      *
      * @param {*} jid
@@ -248,6 +248,7 @@ async function startyol() {
             }), options)
             yol.relayMessage(jid, template.message, { messageId: template.key.id })
     }
+    
     // Add Other
     /** Send Button 5 Image
      *
