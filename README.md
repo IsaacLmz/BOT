@@ -2,7 +2,7 @@
   <a href="https://github.com/Hyzerr"><img src="http://readme-typing-svg.herokuapp.com?color=ffc012&center=true&vCenter=true&multiline=false&lines=Hola+soy+Carlos;Soy+de+Equador;Disfruta+del+bot" alt="Asu">
 </p>
 
-# `🔮 𝚃𝙸𝚉𝙸𝙰-𝙼𝙳 🔮`
+# `🔮𝙺𝙸𝚃𝚉𝙸𝙰-𝙼𝙳🔮`
 
 ### `—◉ ✨ ACTIVAR EN HEROKU ✨`
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BrunoSobrino/TheMystic-Bot-MD)
