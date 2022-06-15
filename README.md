@@ -20,7 +20,6 @@ AÑADE AL APARTADO DE BUILPACK LO SIGUIENTE:
 
 ### `—◉ 👾 ACTIVAR EN TERMUX 👾`
 ```bash
-
 ESCRIBE LOS SIGUIENTES COMANDOS:
 
 1)- termux-setup-storage
@@ -39,8 +38,8 @@ ESCRIBE LOS SIGUIENTES COMANDOS:
 
 ### `—◉ ✔️ ACTIVAR EN CASO DE DETENERSE ✔️`
 ```bash
-1)- cd 
-2)- cd kitzia-md
+
+1)- cd kitzia-md
 3)- npm start
 ```
 
